@@ -2,7 +2,11 @@
 
 **Team Legend:** EE  
 
-**Team Members:** Ray Zhai, Reino Yuris, Farrel Reynard, Sacha Mcfarlane  
+**Team Members:** 
+- Ray Zhai
+- Reino Yuris
+- Farrel Reynard Simarmata_50233858_kreugerreznov_s5023385@student.uq.edu.au
+- Sacha Mcfarlane  
 
 **Github Repository:** [Link to Repository]
 
