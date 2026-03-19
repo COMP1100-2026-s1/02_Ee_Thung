@@ -5,7 +5,7 @@
 **Team Members:** 
 - Ray Zhai
 - Reino Yuris
-- Farrel Reynard Simarmata _ 50233858 _ kreugerreznov _ s5023385@student.uq.edu.au
+- Farrel Reynard Simarmata _ 50233858 _ kreugerreznov _ 's5023385@student.uq.edu.au'
 - Sacha Mcfarlane  
 
 **Github Repository:** [Link to Repository]
