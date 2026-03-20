@@ -6,7 +6,9 @@
 - Ray Zhai _ 49610051 _ uuuouhrgh _ `s4961005@student.uq.edu.au` 67676767
 - Reino Yuris _ 50220317 _ xlx _ `s5022031@student.uq.edu.au`
 - Farrel Reynard Simarmata _ 50233858 _ kreugerreznov _ `s5023385@student.uq.edu.au`
-- Sacha Mcfarlane  
+- Sacha Mcfarlane
+
+**Weekly Planner Sheets: https://docs.google.com/spreadsheets/d/1pL_UC9MjEZ9oHFNgCih_UC2j6aojDUagWbh02RmQi68/edit?usp=sharing**
 
 ---
 
