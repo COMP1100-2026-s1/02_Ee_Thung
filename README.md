@@ -3,7 +3,7 @@
 **Team Legend:** EE  
 
 **Team Members:** 
-- Ray Zhai
+- Ray Zhai _ 49610051 _ uuuouhrgh _ `s4961005@student.uq.edu.au`
 - Reino Yuris _ 50220317 _ xlx _ `s5022031@student.uq.edu.au`
 - Farrel Reynard Simarmata _ 50233858 _ kreugerreznov _ `s5023385@student.uq.edu.au`
 - Sacha Mcfarlane  
