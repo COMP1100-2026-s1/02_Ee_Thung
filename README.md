@@ -40,3 +40,9 @@ Team2-EE-UQ-Innovation/
 ├── README.md                      # Main landing page (The file we made earlier)
 └── LICENSE                        # Standard MIT or Open Source license
 ```
+
+## 💡 Hypotheses
+
+- International students are more likely to join extracurricular activities to build more connections.
+- Students feel overwhelmed by the sheer number of clubs at UQ and, as a result, end up joining zero clubs or only the most famous ones.
+- Students heavily rely on Market Day for club discovery; missing it or finding it intimidating often leaves them disconnected for the rest of the semester.
