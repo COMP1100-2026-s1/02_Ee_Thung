@@ -19,26 +19,35 @@
 ## 📂 Directory Tree
 ```text
 Team2-EE-UQ-Innovation/
-├── docs/                          # Documentation and reports
-│   ├── business-model/            # Business Model Canvas (BMC) iterations
-│   │   ├── BMC_v1_initial.pdf
-│   │   └── BMC_v2_validated.pdf
-│   ├── ethics/                    # Permission forms and ethical guidelines
-│   └── project-plan.md            # Lean Startup roadmap
-├── research/                      # All data gathered from "Real People"
+├── docs/                                  # Documentation and reports
+│   ├── business-model & value-proposition/# BMC and Value Proposition Canvas
+│   │   ├── business_model_canvas.md
+│   │   └── value_prop_canvas.md
+│   ├── hypotheses & experiments/          # Research assumptions and tests
+│   │   ├── learning_cards/
+│   │   │   └── learningcard_Reino.md
+│   │   └── test_cards/
+│   └── team_values.md                     # Team guidelines and values
+├── research/                              # All data gathered from "Real People"
 │   ├── interviews/
-│   │   └── transcripts/           # Cleaned text files from interviews
-│   │       ├── interview_01_Ray.md
-│   │       ├── interview_02_Reino.md
-│   │       └── ...
-│   └── analysis/                  # Insights, themes, and affinity mapping
-├── prototype/                     # MVP development (Software)
-│   ├── ui-ux/                     # Figma links or wireframe images
-│   ├── src/                       # Source code for your software solution
-│   └── README.md                  # Technical setup instructions
-├── .gitignore                     # Ignore node_modules, .DS_Store, etc.
-├── README.md                      # Main landing page (The file we made earlier)
-└── LICENSE                        # Standard MIT or Open Source license
+│   │   ├── Iteration 1/                   # First round of interviews
+│   │   │   └── transcripts/               # Cleaned text files from interviews
+│   │   │       ├── Farrel/
+│   │   │       └── Reino/
+│   │   ├── Iteration 2/                   # Second round of interviews
+│   │   └── Iteration 3/                   # Third round of interviews
+│   └── analysis/                          # Insights, themes, and affinity mapping
+├── prototype/                             # Prototype development (Software)
+│   ├── ui-ux/                             # Figma links or wireframe images
+│   ├── src/                               # Source code for your software solution
+│   └── README.md                          # Technical setup instructions
+├── MVP/                                   # Minimum Viable Product materials
+│   ├── src/                               # MVP source files
+│   ├── MVP features/
+│   └── possible solutions/
+├── .gitignore                             # Ignore node_modules, .DS_Store, etc.
+├── README.md                              # Main landing page (The file we made earlier)
+└── LICENSE                                # Standard MIT or Open Source license
 ```
 
 ## 💡 Hypotheses
