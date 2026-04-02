@@ -1,46 +1,33 @@
 # Business Model Canvas
 
 ## Customer Segments
-*Define the different groups of people or organizations your enterprise aims to reach and serve.*
-- 
-- 
 
-## Customer Relationships
-*Describe the types of relationships your company establishes with specific Customer Segments (e.g., personal assistance, automated services, communities).*
-- 
-- 
+- Socially anxious domestic students: Local students who want to join extracurriculars but are daunted by the idea of attending alone. 
 
-## Channels
-*Describe how your company communicates with and reaches its Customer Segments to deliver the Value Proposition.*
-- 
-- 
+- Connection seeking international students: Students who are looking for a home away from home and cultural belonging. 
 
-## Revenue Streams
-*Represent the cash your company generates from each Customer Segment.*
-- 
-- 
+- New UQ students: Students in their first few weeks who are most likely unfamiliar with the club system at UQ. 
 
 ## Value Propositions
-*Describe the bundle of products and services that create value for a specific Customer Segment.*
-- 
-- 
 
-## Key Activities
-*Describe the most important things your company must do to make its business model work.*
-- 
-- 
+- The "Buddy System" Onboarding: Reducing the social barrier by pairing new students with social anchors for their first meeting. This could be club seniors or simply other new students who share the same interests.
 
-## Key Resources
-*Describe the most important assets required to make your business model work (physical, intellectual, human, or financial).*
-- 
-- 
+- Extended Entry Windows: Creating "mid-sem welcome events" for those who missed Market Day to prevent long-term disconnection. This gives new students more time to learn about the different clubs and societies. 
 
-## Key Partnerships
-*Describe the network of suppliers and partners that make your business model work.*
-- 
-- 
+- Curation Over Choice: Providing clearer pictures of clubs and their activities. This includes a detailed description of what a day of club activities looks like, links to all social media accounts, and an easier way to search for specific niches. 
 
-## Cost Structure
-*Describe all costs incurred to operate your business model.*
-- 
-- 
+## Channels
+
+- Market Day: The primary high-traffic touchpoint in the Great Court. We will have workers advertising the product to new students.
+
+- Digital Discovery Platforms: UQ Life website, Discord servers, and Instagram "Club Spotlights".
+
+- Lecture/Tutorial Shilling: Direct announcements in high-density courses (like CSSE2010 or MATH2001) to loewr the "discovery" barrier. 
+
+## Revenue Streams
+
+- Membership Fees: Standard $2-$10 entry fees for club access and insurance. 
+
+- Partnerships: Partnerships with the likes of UQ Union who want to improve the accessibility of extracurriculars. 
+
+- Event Ticket Sales: Revenue from high-value socia mixers, balls, or professional networking nights.
