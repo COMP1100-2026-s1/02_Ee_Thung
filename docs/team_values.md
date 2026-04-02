@@ -1,4 +1,4 @@
-TEAM VALUES:
+## TEAM VALUES:
 
 Always share your opinion 
 Do your fair share of work

@@ -1,3 +1,9 @@
+# COMP1100: Test Cards - Team 2 (EE)
+
+**Project:** UQ Extracurricular Discovery Solution
+
+---
+
 ## Hypothesis 1: Students feel overwhelmed by the sheer number of clubs (220+) at UQ and, as a result, end up joining zero clubs or only the most famous ones.
 
 **Test**: Ask students to list the clubs they considerted joining versus the clubs that they actually joined, so we can get a sense of selection and awareness of extracurriculars. 
@@ -13,6 +19,7 @@
     2. When you saw the full list of 200+ clubs, did you feel like you had plenty of options, or did it feel like too much to filter through?
 
 
+--
 
 
 ## Hypothesis 2: Most students only discover extracurriculars during Market Day; if they miss that day of feel intimidated by the crowds, they remain disconnected for the rest of the semester. 
@@ -30,6 +37,7 @@
     2. If you didn't sign up for a club in the first two weeks of semester, do you feel like you've missed out for the rest of the year, or do you feel comfortable showing up anytime? 
 
 
+--
 
 
 ## Hypothesis 3: International students are more likely to join extracurricular activities to build more connection. 
@@ -47,6 +55,7 @@
     2. What were the last extracurricular activies you saw that looked interesting, but you didn't go to, and why? 
 
 
+--
 
 
 ## Hypothesis 4: Students are significantly more likely to join a club if they have social connections already in the group. Without one, the perceived social difficulties of attending a first meeting acts a barrier. 
