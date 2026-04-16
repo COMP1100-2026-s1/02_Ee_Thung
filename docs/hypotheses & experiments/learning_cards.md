@@ -4,19 +4,9 @@
 
 ---
 
-## Learning Card 1: The "Social Safety" Factor
+## Learning Card 1: Information Fragmentation
 
-**We believed that** students are hesitant to join new activities because they are afraid of attending the first meeting alone without a social connection.
-
-**We observed that** 80% of students interviewed explicitly stated they are more likely to join if a friend is already a member. Qualitative data showed that joining alone is viewed as a "big social hurdle," with some students admitting to being "too shy" to introduce themselves to large groups of strangers without a prior connection.
-
-**From this we learnt that** having a "social bridge" or knowing the "vibe" of a club beforehand is often more influential in the decision-making process than the actual activity or hobby the club offers.
-
-**Therefore, we will** accept this hypothesis and explore software features that facilitate "buddy systems" or social indicators (e.g., showing interest from mutual connections) to lower the entry barrier for new members.
-
----
-
-## Learning Card 2: Information Fragmentation
+**Refer to** : Study card 1
 
 **We believed that** students struggle to find extracurriculars because information is scattered across too many different platforms.
 
@@ -28,7 +18,9 @@
 
 ---
 
-## Learning Card 3: Discovery Channels (Market Day vs. Digital)
+## Learning Card 2: Discovery Channels (Market Day vs. Digital)
+
+**Refer to** : Study card 2
 
 **We believed that** Market Day is the primary way students discover and join all their extracurricular activities.
 
@@ -40,7 +32,9 @@
 
 ---
 
-## Learning Card 4: Career vs. Interest Motivation
+## Learning Card 3: Career vs. Interest Motivation
+
+**Refer to** : Study card 3
 
 **We believed that** students prioritize clubs that align with their career goals over clubs that are purely for social/hobby interests.
 
@@ -49,3 +43,18 @@
 **From this we learnt that** a successful platform must treat social-wellbeing and career-readiness as equally important categories, allowing students to filter activities based on their current immediate needs (e.g., "stress relief" vs. "networking").
 
 **Therefore, we will** accept that our solution must provide clear categorization for both social and educational activities to help students manage their holistic university experience.
+
+---
+
+## Learning Card 4: The "Social Safety" Factor
+
+**Refer to** : Study card 4
+
+**We believed that** students are hesitant to join new activities because they are afraid of attending the first meeting alone without a social connection.
+
+**We observed that** 80% of students interviewed explicitly stated they are more likely to join if a friend is already a member. Qualitative data showed that joining alone is viewed as a "big social hurdle," with some students admitting to being "too shy" to introduce themselves to large groups of strangers without a prior connection.
+
+**From this we learnt that** having a "social bridge" or knowing the "vibe" of a club beforehand is often more influential in the decision-making process than the actual activity or hobby the club offers.
+
+**Therefore, we will** accept this hypothesis and explore software features that facilitate "buddy systems" or social indicators (e.g., showing interest from mutual connections) to lower the entry barrier for new members.
+
