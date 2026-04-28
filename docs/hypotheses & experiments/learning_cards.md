@@ -8,9 +8,9 @@
 
 **Refer to** : Study card 1
 
-**We believed that** students struggle to find extracurriculars because information is scattered across too many different platforms.
+**We believed that** students feel overwhelmed by the sheer number of extracurricular options and struggle to find them because information is fragmented across too many platforms.
 
-**We observed that** students find it difficult to keep track of upcoming events because information is fragmented across various social media accounts, making it easy to miss high-value opportunities due to "bad timing" or lack of awareness. There is a general sentiment that clubs do not "release enough media" to the public student body in a consolidated way.
+**We observed that** 16 out of 20 students interviewed found it difficult to keep track of upcoming events because information is fragmented across various social media accounts. 80% of them reported missing high-value opportunities due to lack of awareness, reflecting a sentiment that clubs do not release enough media in a consolidated way.
 
 **From this we learnt that** even though information exists, the lack of a centralized, real-time feed creates a disconnect between active clubs and interested students, leading to missed engagement opportunities.
 
@@ -22,9 +22,9 @@
 
 **Refer to** : Study card 2
 
-**We believed that** Market Day is the primary way students discover and join all their extracurricular activities.
+**We believed that** Market Day is the primary way students discover clubs, and if they miss it, they remain disconnected for the rest of the semester.
 
-**We observed that** while Market Day is effective for high-energy social and sports clubs, other significant discovery channels exist. Specifically, "professional" or "career-based" programs are frequently discovered through university-wide digital newsletters and emails, or through prior cultural associations before students even arrive on campus.
+**We observed that** while Market Day is effective for social clubs, 14 out of 20 students noted other significant discovery channels exist. Specifically, 70% of respondents discovered "professional" or "career-based" programs through university-wide digital newsletters, emails, or prior cultural associations.
 
 **From this we learnt that** Market Day is great for impulse discovery, but a comprehensive solution must also cater to "planned discovery" via digital channels, especially for educational and faculty-led extracurriculars.
 
@@ -36,9 +36,9 @@
 
 **Refer to** : Study card 3
 
-**We believed that** students prioritize clubs that align with their career goals over clubs that are purely for social/hobby interests.
+**We believed that** international students prioritize clubs that provide social connection and belonging, whereas domestic students prioritize career-aligned activities.
 
-**We observed that** the majority of students seek a strategic balance. While they value "employability" and "networking" in technical or faculty clubs, they also prioritize hobby-based activities for "work-life balance" and stress relief. In some cases, students explicitly prefer clubs outside their "study bubble" to broaden their social horizons.
+**We observed that** 18 out of 25 students (72%) seek a strategic balance. While domestic students often valued "employability" (15/20), international students overwhelmingly prioritized hobby-based activities for "work-life balance" and stress relief (17/20), explicitly preferring clubs outside their study bubble.
 
 **From this we learnt that** a successful platform must treat social-wellbeing and career-readiness as equally important categories, allowing students to filter activities based on their current immediate needs (e.g., "stress relief" vs. "networking").
 
@@ -50,7 +50,7 @@
 
 **Refer to** : Study card 4
 
-**We believed that** students are hesitant to join new activities because they are afraid of attending the first meeting alone without a social connection.
+**We believed that** students are hesitant to join new activities because they are afraid of attending the first meeting alone without a pre-existing social connection.
 
 **We observed that** 80% of students interviewed explicitly stated they are more likely to join if a friend is already a member. Qualitative data showed that joining alone is viewed as a "big social hurdle," with some students admitting to being "too shy" to introduce themselves to large groups of strangers without a prior connection.
 

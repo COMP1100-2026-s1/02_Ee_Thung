@@ -4,13 +4,13 @@
 
 ---
 
-## Hypothesis 1: Students feel overwhelmed by the sheer number of clubs (220+) at UQ and, as a result, end up joining zero clubs or only the most famous ones.
+## Hypothesis 1: We believe that students feel overwhelmed by the sheer number of extracurricular options and struggle to find them because information is fragmented across too many platforms.
 
 **Test**: Ask students to list the clubs they considerted joining versus the clubs that they actually joined, so we can get a sense of selection and awareness of extracurriculars.
 
-**Metric**: We will measure this by determining the percentage of students who only recognise or joined top tier or faculty wide clubs compared to niche hobbies.
+**Metric**: We will measure this by determining if 15 out of 20 interviewed students report only recognizing or joining top-tier or faculty-wide clubs, rather than niche hobbies.
 
-**Criteria**: We are right if more than 60% of students say the feel some sense of choice paralysis or say that the 220+ options made it harder, rather than easier, to pick a club.
+**Criteria**: We are right if at least 12 out of 20 students (60%) explicitly state they feel choice paralysis and that the 220+ options made it harder to pick a club.
 
 **Interview Question**:
 
@@ -20,13 +20,13 @@
 
 --
 
-## Hypothesis 2: Most students only discover extracurriculars during Market Day; if they miss that day of feel intimidated by the crowds, they remain disconnected for the rest of the semester.
+## Hypothesis 2: We believe that Market Day is the primary way students discover clubs, and if they miss it, they remain disconnected for the rest of the semester.
 
 **Test**: Compare the extracurricular engagement levels of students who attended market day compared to those who did not.
 
-**Metric**: We can measure this by determining the onboarding success rate.
+**Metric**: We can measure this by determining the onboarding success rate among a sample of 30 students.
 
-**Criteria**: We are correct if more than 80% of students who missed or felt overwhelmed by Market Day report that they don't really know how to break in to a club mid-semester.
+**Criteria**: We are correct if at least 24 out of 30 students (80%) who missed or felt overwhelmed by Market Day report that they don't know how to break into a club mid-semester.
 
 **Interview Questions**:
 
@@ -36,13 +36,13 @@
 
 --
 
-## Hypothesis 3: International students are more likely to join extracurricular activities to build more connection.
+## Hypothesis 3: We believe that international students prioritize clubs that provide social connection and belonging, whereas domestic students prioritize career-aligned activities.
 
 **Test**: To verify this, we will ask international and domestic students about their motivations for joining extracurriculars.
 
-**Metric**: We measure the frequency of words similar to "belonging", "home", and "connection" in international responses compared to "resume" or "skill-building" in responses from domestic students.
+**Metric**: We measure if at least 15 out of 20 international students mention words similar to "belonging", "home", and "connection", compared to 15 out of 20 domestic students mentioning "resume" or "skill-building".
 
-**Criteria**: We're right if international students generally rank social connection as their primary driver more than domestic students, who might prioritise career-aligned activities given they are more likely to already have an established social sphere.
+**Criteria**: We're right if over 75% of international students rank social connection as their primary driver, while over 75% of domestic students prioritize career-aligned activities.
 
 **Interview Questions**:
 
@@ -52,13 +52,13 @@
 
 --
 
-## Hypothesis 4: Students are significantly more likely to join a club if they have social connections already in the group. Without one, the perceived social difficulties of attending a first meeting acts a barrier.
+## Hypothesis 4: We believe that students are hesitant to join new activities because they are afraid of attending the first meeting alone without a pre-existing social connection.
 
 **Test**: Ask students whether they would attend a meeting for their biggest interests if they had to go by themselves without any connections.
 
-**Metric**: We will measure the gap between a student's interest in a club and their likelihood of attendance when their friends are removed.
+**Metric**: We will measure this by asking a sample of 30 students if they would attend a meeting for their highest-interest club if no friends were going.
 
-**Criteria**: We are correct is more than 75% of students who report a high interest in a specific extracurricular admit they would not attend a meeting if no one they knew was going.
+**Criteria**: We are correct if at least 23 out of 30 students (76%) who report high interest admit they would not attend a meeting if no one they knew was going.
 
 **Interview Question**:
 
