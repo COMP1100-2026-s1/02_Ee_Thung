@@ -57,4 +57,3 @@
 **From this we learnt that** having a "social bridge" or knowing the "vibe" of a club beforehand is often more influential in the decision-making process than the actual activity or hobby the club offers.
 
 **Therefore, we will** accept this hypothesis and explore software features that facilitate "buddy systems" or social indicators (e.g., showing interest from mutual connections) to lower the entry barrier for new members.
-
