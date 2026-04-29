@@ -114,5 +114,5 @@ User clicks "I'm Going" (Open Social) / "Join Now" (Club) OR "Request Pathfinder
 
 ## 📌 Next Steps
 
-See **[Test Cards](./test_cards.md)** for how we validate these assumptions.  
-See **[Learning Cards](./learning_cards.md)** for insights from our user research.
+See **[Test Cards](../possible%20solutions/test_cards.md)** for how we validate these assumptions.  
+See **[Learning Cards](../possible%20solutions/learning_cards.md)** for insights from our user research.
