@@ -15,90 +15,66 @@ Our solution consists of three core pillars derived from our BMC and VPC insight
 
 ---
 
-## Hypothesis 5: A centralized app with club dashboards and activity cards would be less intimidating for students compared to the current fragmented sign-up process (scattered Instagram, Discord, and in-person Market Day stalls).
+## Hypothesis 5: The current club discovery and sign-up process is fragmented, frustrating, and intimidating, creating barriers that prevent students from joining clubs and building community.
 
-**Relates to:** BMC — Value Proposition (Navigational Clarity, Social Confidence) | VPC — Pain Relievers (all segments) | Learning Card 1 (Information Fragmentation) & Learning Card 4 (Social Safety Factor)
+**Relates to:** BMC — Value Proposition (Navigational Clarity, Social Confidence) | VPC — Pain Points (all segments) | Learning Card 1 (Information Fragmentation) & Learning Card 4 (Social Safety Factor)
 
-**Test:** Present the UQ-Connect concept to students and ask them to compare it directly against their current experience of discovering and signing up for clubs via online platforms and in-person events.
+**Test:** Ask students about their current experience finding and signing up for clubs across online and in-person channels, and identify the specific friction points that prevent or discourage them from joining.
 
-**Metric:** We will measure the percentage of students who agree that a centralized app-based approach would feel less intimidating than the current system.
+**Metric:** We will categorize the types of frustration/intimidation factors students report (e.g., scattered information, unclear expectations, fear of commitment, social anxiety) and measure how frequently each barrier appears.
 
-**Criteria:** We are right if more than 70% of students say the proposed UQ-Connect solution would make them feel more confident about exploring and joining clubs compared to the existing scattered process.
+**Criteria:** We are right if more than 60% of students report at least one significant frustration or intimidating factor in their current club discovery process, validating that a centralized solution addresses a real pain point.
 
-**Interview Question:**
+**Interview Questions:**
 
-    1. Would this solution be less intimidating to use compared to the current online/in-person sign-up for clubs?
+    1. How do you currently find and sign up for clubs or societies, and what do you find most frustrating or intimidating about that process — whether online or in person?
 
-    2. What specifically about the current sign-up process do you find most off-putting, and does this concept address that?
+    4. Have you ever felt hesitant to reach out to a club or society? If so, what could a digital tool do to make that first step feel easier or less intimidating?
 
 ---
 
-## Hypothesis 6: Students prefer specific UI filtering methods (e.g., search bar, category tabs, or curated lists) over a raw, unstructured directory when browsing clubs and events on a centralized platform.
+## Hypothesis 6: Students have clear, converging preferences for how they prefer to browse and filter clubs (e.g., search bar, category tabs, degree-based filtering), and identifying these preferences will inform our MVP UX design.
 
 **Relates to:** BMC — Key Activities (Data Curation & Verification) | VPC — Pain Relievers (simplified "interest-based" club filtering, "Club Match Quiz") | Learning Card 2 (Discovery Channels)
 
-**Test:** Ask students which filtering or navigation pattern they would instinctively reach for when trying to find a relevant club or event within the app, gauging both preference and perceived accessibility.
+**Test:** Ask students which navigation and filtering methods would feel most natural and intuitive when searching for relevant clubs on a centralized app or website.
 
-**Metric:** We will categorize student preferences across filtering methods (Search Bar, Category Tabs, Curated Lists, Recommendation Feed, Quiz/Match) and measure which method receives the highest preference.
+**Metric:** We will categorize student preferences across filtering methods (Search Bar, Category Tabs, Degree/Interest Filtering, Recommendation Feed, Quiz/Match) and measure which methods receive the highest preference.
 
-**Criteria:** We are right if a clear majority (>50%) of students converge on one or two preferred filtering methods, indicating a dominant UX pattern we should prioritize in the MVP.
+**Criteria:** We are right if a clear majority (>60%) of students converge on one or two preferred filtering methods, indicating a dominant UX pattern we should prioritize in the MVP.
 
 **Interview Question:**
 
-    1. What type of filtering option would be more accessible to you when finding a relevant club for your interest or degree (e.g., Search bar, Tabs, Lists)?
-
-    2. When you open an app like this for the first time, what's the first thing you'd want to do — browse, search, or get matched?
+    2. If you were using an app or website to browse clubs and societies, what would make it easiest to find something relevant to your interests or degree? For example, perhaps searching by keyword, browsing categories, or filtering by degree?
 
 ---
 
-## Hypothesis 7: Students have unmet needs beyond event discovery and social matching that a campus engagement platform could address — and identifying these needs early will strengthen our MVP scope.
+## Hypothesis 7: Students have specific feature expectations and unmet needs when it comes to club discovery platforms — identifying these will reveal gaps in our MVP scope and opportunities for future enhancement.
 
 **Relates to:** BMC — Customer Relationships (Personalized Automation, Peer-to-Peer Community) | VPC — Customer Jobs (all segments) | Learning Card 3 (Career vs. Interest Motivation)
 
-**Test:** After presenting the three pillars of UQ-Connect, ask students to identify any gaps or additional features they wish existed — capturing unmet needs that our current feature set may not address.
+**Test:** Ask students what additional features, information, or functionality they would want to see in a club discovery app to make them more likely to explore and join clubs.
 
-**Metric:** We will catalog all suggested features and measure the frequency of recurring themes (e.g., timetable integration, reviews/ratings, anonymous mode, event reminders).
+**Metric:** We will catalog all suggested features and measure the frequency of recurring themes (e.g., member reviews/ratings, event reminders, club contact info, past event photos, member testimonials, timetable integration, anonymous mode).
 
-**Criteria:** We are right if more than 60% of students suggest at least one additional feature not currently in our three-pillar solution, indicating a real demand for expanded functionality.
+**Criteria:** We are right if more than 50% of students suggest at least one additional feature or information type not currently prioritized in our three-pillar solution, indicating real demand for expanded functionality.
 
 **Interview Question:**
 
-    1. Are there any extra features that you would want added to this application to aid your experience?
-
-    2. Is there anything about your current campus life that you wish an app could solve but nothing does right now?
+    3. Are there any features or information you wish an app had when exploring clubs — things that would have made you more likely to join or reach out?
 
 ---
 
-## Hypothesis 8: A built-in chat or messaging function would help students build meaningful connections with clubs, societies, and other students — bridging the gap between "discovering" and "belonging."
+## Hypothesis 8: One-on-one consultations with student ambassadors or club leaders would meaningfully reduce student hesitation and increase their confidence to join clubs, making it a critical feature for supporting our most vulnerable segments.
 
-**Relates to:** BMC — Customer Relationships (Peer-to-Peer Community) & Channels | VPC — Gain Creators ("First-timer" mixers, peer-mentoring) | Learning Card 4 (The "Social Safety" Factor)
+**Relates to:** BMC — Key Resources (Student Ambassador Network) & Customer Relationships (On-the-Ground Support, High-Touch Pathfinding) | VPC — Pain Relievers (Buddy System, Human Bridge) | Learning Card 4 (The "Social Safety" Factor)
 
-**Test:** Ask students whether a chat function within the app would increase their likelihood of engaging with clubs and other students, and how they envision using it (e.g., group chat, DMs to club execs, event-specific threads).
+**Test:** Present the concept of booking a casual, one-on-one chat with a student ambassador or club leader through the app, and measure whether students believe this would change their likelihood of joining clubs.
 
-**Metric:** We will measure the percentage of students who believe a chat function would meaningfully help them connect, and categorize the types of chat interactions they value most.
+**Metric:** We will measure the percentage of students who say a 1-on-1 booking feature would increase their confidence, and whether they would realistically use it if available.
 
-**Criteria:** We are right if more than 65% of students say a chat feature would positively influence their willingness to reach out to clubs or attend events.
-
-**Interview Question:**
-
-    1. How would the use of a chat function help you connect with other groups and societies?
-
-    2. Would you prefer chatting with a club exec before attending, or would you rather just show up? Why?
-
----
-
-## Hypothesis 9: 1-on-1 meetings with student ambassadors and society leaders would provide the "social bridge" that hesitant students need to overcome the barrier of joining clubs and understanding their culture.
-
-**Relates to:** BMC — Key Resources (Student Ambassador Network) & Customer Relationships (On-the-Ground Support) | VPC — Pain Relievers (Buddy System, Mandatory Icebreaker protocols) | Learning Card 4 (The "Social Safety" Factor)
-
-**Test:** Present the concept of the 1-on-1 Consultation Hub and ask students whether a low-pressure, individual meeting with a club leader would make them more likely to take the first step toward joining.
-
-**Metric:** We will measure the percentage of students who say a 1-on-1 meeting would increase their confidence to join a club, and whether they would actually book one if the feature were available.
-
-**Criteria:** We are right if more than 70% of students say they would find 1-on-1 meetings helpful, and at least 50% say they would realistically use the booking feature.
+**Criteria:** We are right if more than 70% of students say they would find 1-on-1 meetings helpful in reducing hesitation, and at least 55% say they would realistically book one to learn more about a club before committing.
 
 **Interview Question:**
 
-    1. Would 1-on-1 meetings with ambassadors and society leaders help you connect with clubs and their values/activities?
-
-    2. If you could book a casual 15-minute coffee chat with a club senior before committing, would that change your decision to join?
+    6. Would the option to book a one-on-one chat with a student ambassador or club leader through an app change how confident you felt about joining? What would make that most useful to you?
