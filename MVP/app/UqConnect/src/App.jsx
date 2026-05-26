@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
-import { AppProvider } from './context/AppContext';
+import { AppProvider, useAppContext } from './context/AppContext';
 import TopNav from './components/TopNav';
 import BottomNav from './components/BottomNav';
 import WelcomePage from './pages/WelcomePage';
@@ -48,35 +48,59 @@ function AnimatedRoutes({ isAuthenticated, handleLogin, handleLogout }) {
   );
 }
 
-function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [userName, setUserName] = useState('');
+// Inner component so it can access AppContext
+function AppInner() {
+  const { setUserName } = useAppContext();
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    () => !!localStorage.getItem('isAuthenticated')
+  );
+  const [displayName, setDisplayName] = useState(
+    () => localStorage.getItem('userName') || ''
+  );
 
   const handleLogin = (name = 'Student') => {
+    localStorage.setItem('isAuthenticated', '1');
+    localStorage.setItem('userName', name);
     setIsAuthenticated(true);
+    setDisplayName(name);
     setUserName(name);
   };
+
   const handleLogout = () => {
+    localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('userName');
+    localStorage.removeItem('joinedActivityIds');
     setIsAuthenticated(false);
+    setDisplayName('');
     setUserName('');
   };
 
+  // Sync userName to context on mount
+  useEffect(() => {
+    const stored = localStorage.getItem('userName');
+    if (stored) setUserName(stored);
+  }, [setUserName]);
+
+  return (
+    <div className="min-h-screen bg-[#F9FAFB] relative font-sans">
+      {isAuthenticated && <TopNav userName={displayName} />}
+      <main className="min-h-screen overflow-y-auto no-scrollbar">
+        <AnimatedRoutes
+          isAuthenticated={isAuthenticated}
+          handleLogin={handleLogin}
+          handleLogout={handleLogout}
+        />
+      </main>
+      {isAuthenticated && <BottomNav userName={displayName} />}
+    </div>
+  );
+}
+
+function App() {
   return (
     <Router>
       <AppProvider>
-        <div className="min-h-screen bg-[#F9FAFB] relative font-sans">
-          {isAuthenticated && <TopNav userName={userName} />}
-
-          <main className="min-h-screen overflow-y-auto no-scrollbar">
-            <AnimatedRoutes
-              isAuthenticated={isAuthenticated}
-              handleLogin={handleLogin}
-              handleLogout={handleLogout}
-            />
-          </main>
-
-          {isAuthenticated && <BottomNav userName={userName} />}
-        </div>
+        <AppInner />
       </AppProvider>
     </Router>
   );

@@ -7,7 +7,8 @@ import { useAppContext } from '../context/AppContext';
 export default function ChatRoomPage() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { joinedActivities, chats, sendMessage } = useAppContext();
+  const { joinedActivities, chats, sendMessage, userName } = useAppContext();
+  const displayName = userName || 'You';
   
   const [inputText, setInputText] = useState('');
   const messagesEndRef = useRef(null);
@@ -36,9 +37,8 @@ export default function ChatRoomPage() {
   const handleSend = (e) => {
     e.preventDefault();
     if (!inputText.trim()) return;
-
     const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    sendMessage(activityId, { sender: 'You', text: inputText, time });
+    sendMessage(activityId, { sender: displayName, text: inputText, time });
     setInputText('');
   };
 
@@ -72,7 +72,7 @@ export default function ChatRoomPage() {
         </div>
         
         {messages.map((msg, idx) => {
-          const isMe = msg.sender === 'You';
+          const isMe = msg.sender === displayName;
           // Slack/iMessage hybrid style
           return (
             <motion.div 
