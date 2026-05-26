@@ -11,7 +11,7 @@ export default function RegisterPage({ onLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (studentId.length === 8 && password.length > 0 && name.length > 0) {
-      onLogin();
+      onLogin(name);
       navigate('/feed');
     }
   };

@@ -14,6 +14,8 @@ import HostPage from './pages/HostPage';
 import PathfinderPage from './pages/PathfinderPage';
 import AccountPage from './pages/AccountPage';
 import HistoryPage from './pages/HistoryPage';
+import ChatsPage from './pages/ChatsPage';
+import ChatRoomPage from './pages/ChatRoomPage';
 
 function AnimatedRoutes({ isAuthenticated, handleLogin, handleLogout }) {
   const location = useLocation();
@@ -36,6 +38,8 @@ function AnimatedRoutes({ isAuthenticated, handleLogin, handleLogout }) {
             <Route path="/pathfinder" element={<PathfinderPage />} />
             <Route path="/account" element={<AccountPage onLogout={handleLogout} />} />
             <Route path="/history" element={<HistoryPage />} />
+            <Route path="/chats" element={<ChatsPage />} />
+            <Route path="/chat/:id" element={<ChatRoomPage />} />
             <Route path="*" element={<Navigate to="/feed" replace />} />
           </>
         )}
@@ -46,15 +50,22 @@ function AnimatedRoutes({ isAuthenticated, handleLogin, handleLogout }) {
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [userName, setUserName] = useState('');
 
-  const handleLogin = () => setIsAuthenticated(true);
-  const handleLogout = () => setIsAuthenticated(false);
+  const handleLogin = (name = 'Student') => {
+    setIsAuthenticated(true);
+    setUserName(name);
+  };
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    setUserName('');
+  };
 
   return (
     <Router>
       <AppProvider>
         <div className="min-h-screen bg-[#F9FAFB] relative font-sans">
-          {isAuthenticated && <TopNav />}
+          {isAuthenticated && <TopNav userName={userName} />}
 
           <main className="min-h-screen overflow-y-auto no-scrollbar">
             <AnimatedRoutes
@@ -64,7 +75,7 @@ function App() {
             />
           </main>
 
-          {isAuthenticated && <BottomNav />}
+          {isAuthenticated && <BottomNav userName={userName} />}
         </div>
       </AppProvider>
     </Router>

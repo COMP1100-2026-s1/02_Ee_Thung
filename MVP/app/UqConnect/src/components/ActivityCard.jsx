@@ -8,18 +8,14 @@ const tierColors = {
   Competitive: 'bg-red-100 text-red-700',
 };
 
-export default function ActivityCard({ activity, onJoin, readOnly }) {
-  const [joined, setJoined] = useState(false);
+export default function ActivityCard({ activity, onClick, readOnly, isJoined }) {
   const isFull = activity.attendees >= activity.maxAttendees;
 
-  const handleJoin = () => {
-    if (joined || isFull || readOnly) return;
-    setJoined(true);
-    if (onJoin) onJoin();
-  };
-
   return (
-    <div className="bg-white rounded-2xl p-5 shadow-soft border border-gray-100/50 h-full flex flex-col">
+    <div 
+      onClick={onClick}
+      className={`bg-white rounded-2xl p-5 shadow-soft border border-gray-100/50 h-full flex flex-col transition-all ${onClick ? 'cursor-pointer hover:shadow-md hover:border-uqPurple/20 active:scale-[0.98]' : ''}`}
+    >
       <div className="flex justify-between items-start mb-3">
         <div className="flex items-center gap-2 flex-wrap">
           <span className="px-2.5 py-1 text-xs font-semibold bg-uqPurple/10 text-uqPurple rounded-lg flex items-center gap-1">
@@ -65,19 +61,16 @@ export default function ActivityCard({ activity, onJoin, readOnly }) {
           <span className="bg-green-100 text-green-700 px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1">
             <CheckCircle size={13} /> Joined
           </span>
-        ) : joined ? (
+        ) : isJoined ? (
           <span className="bg-green-100 text-green-700 px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1">
             <CheckCircle size={13} /> Joined!
           </span>
         ) : isFull ? (
           <span className="bg-gray-100 text-gray-500 px-3 py-1.5 rounded-xl text-xs font-semibold">Full</span>
         ) : (
-          <button
-            onClick={handleJoin}
-            className="bg-uqPurple text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-sm hover:bg-uqPurple/90 transition-colors active:scale-95"
-          >
-            Join
-          </button>
+          <div className="bg-uqPurple text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-sm flex items-center justify-center">
+            View Details
+          </div>
         )}
       </div>
     </div>

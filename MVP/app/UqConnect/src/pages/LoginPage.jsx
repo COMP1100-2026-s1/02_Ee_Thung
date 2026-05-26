@@ -10,7 +10,7 @@ export default function LoginPage({ onLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (studentId.length === 8 && password.length > 0) {
-      onLogin();
+      onLogin(`s${studentId}`);
       navigate('/feed');
     }
   };

@@ -11,8 +11,21 @@ export function AppProvider({ children }) {
     { id: 102, title: 'Social Tennis Hit', location: 'UQ Tennis Courts', time: 'Last Sunday', tier: 'Hobbyist', vibes: ['Outdoors', 'Chill'], attendees: 4, maxAttendees: 4, organizer: 'Alex M.' },
   ]);
 
+  const initialChats = initialActivities.reduce((acc, act) => {
+    if (act.messages) {
+      acc[act.id] = act.messages;
+    }
+    return acc;
+  }, {});
+  const [chats, setChats] = useState(initialChats);
+
   const addActivity = (activity) => {
-    setActivities(prev => [{ ...activity, id: Date.now(), attendees: 1, maxAttendees: activity.maxAttendees || 8, organizer: 'You' }, ...prev]);
+    const newActivity = { ...activity, id: Date.now(), attendees: 1, maxAttendees: activity.maxAttendees || 8, organizer: 'You' };
+    setActivities(prev => [newActivity, ...prev]);
+    setJoinedActivities(prev => [{ ...newActivity, time: 'Just now' }, ...prev]);
+    if (newActivity.messages) {
+      setChats(prev => ({ ...prev, [newActivity.id]: newActivity.messages }));
+    }
   };
 
   const joinActivity = (activity) => {
@@ -29,8 +42,15 @@ export function AppProvider({ children }) {
     setJoinedClubs(prev => prev.includes(clubId) ? prev.filter(id => id !== clubId) : [...prev, clubId]);
   };
 
+  const sendMessage = (activityId, message) => {
+    setChats(prev => ({
+      ...prev,
+      [activityId]: [...(prev[activityId] || []), message]
+    }));
+  };
+
   return (
-    <AppContext.Provider value={{ activities, addActivity, joinedClubs, joinClub, joinedActivities, joinActivity }}>
+    <AppContext.Provider value={{ activities, addActivity, joinedClubs, joinClub, joinedActivities, joinActivity, chats, sendMessage }}>
       {children}
     </AppContext.Provider>
   );
