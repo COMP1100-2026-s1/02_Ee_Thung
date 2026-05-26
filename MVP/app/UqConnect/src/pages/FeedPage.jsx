@@ -95,32 +95,31 @@ export default function FeedPage() {
             style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(6px)', zIndex: 9998 }}
           />
 
-          {/* Sheet panel — slides up from bottom */}
-          <motion.div
-            key="panel"
-            initial={{ y: '100%', opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: '100%', opacity: 0 }}
-            transition={{ type: 'spring', stiffness: 340, damping: 36 }}
+          {/* Static centering wrapper — framer-motion must NOT touch this transform */}
+          <div
             style={{
               position: 'fixed',
-              bottom: 0,
+              top: '50%',
               left: '50%',
-              transform: 'translateX(-50%)',
-              width: '100%',
+              transform: 'translate(-50%, -50%)',
+              width: '90%',
               maxWidth: '32rem',
-              maxHeight: '92vh',
+              maxHeight: '90vh',
               zIndex: 9999,
               display: 'flex',
               flexDirection: 'column',
             }}
-            className="bg-white rounded-t-3xl shadow-2xl overflow-hidden"
           >
-            {/* Drag handle */}
-            <div className="flex justify-center pt-3 pb-1 shrink-0">
-              <div className="w-10 h-1 bg-gray-200 rounded-full" />
-            </div>
-
+            {/* Only animate scale/opacity — no translate, so centering is never overridden */}
+            <motion.div
+              key="panel"
+              initial={{ opacity: 0, scale: 0.94, y: 16 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.94, y: 16 }}
+              transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+              style={{ width: '100%', maxHeight: '90vh', display: 'flex', flexDirection: 'column' }}
+              className="bg-white rounded-3xl shadow-2xl overflow-hidden"
+            >
             {/* === SUCCESS STATE === */}
             {paymentSuccess ? (
               <motion.div
@@ -328,6 +327,7 @@ export default function FeedPage() {
               </div>
             )}
           </motion.div>
+          </div>
         </>
       )}
     </AnimatePresence>
