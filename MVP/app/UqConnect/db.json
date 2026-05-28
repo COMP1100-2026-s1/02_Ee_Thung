@@ -1,0 +1,269 @@
+{
+  "activities": [
+    {
+      "id": "1",
+      "title": "Casual Tennis Hit",
+      "location": "UQ Tennis Courts",
+      "time": "Starting in 15m",
+      "tier": "Hobbyist",
+      "vibes": [
+        "Chill",
+        "Outdoors"
+      ],
+      "attendees": 4,
+      "maxAttendees": 4,
+      "organizer": "Alex M.",
+      "description": "Looking for a quick rally before my afternoon classes. Nothing too serious, just some good casual hits and maybe a game or two if we have time. Bring your own racket!",
+      "attendeesList": [
+        "Alex M.",
+        "Jordan",
+        "Sam",
+        "Reino Yuris Kusumanegara"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "LeetCode & Coffee",
+      "location": "Merlo Coffee",
+      "time": "In 1 hour",
+      "tier": "Newbie",
+      "vibes": [
+        "Academic",
+        "Tech"
+      ],
+      "attendees": 6,
+      "maxAttendees": 8,
+      "organizer": "Sarah T.",
+      "description": "Struggling with graphs and dynamic programming? Join us at Merlo where we will grind some Leetcode easy/mediums and help each other out. All skill levels welcome!",
+      "attendeesList": [
+        "Sarah T.",
+        "Michael",
+        "David",
+        "Jessica",
+        "Reino Yuris"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Bouldering Session",
+      "location": "Urban Climb West End",
+      "time": "Tonight 6pm",
+      "tier": "Competitive",
+      "vibes": [
+        "Active",
+        "Indoor"
+      ],
+      "attendees": 2,
+      "maxAttendees": 4,
+      "organizer": "Jake P.",
+      "description": "Projecting some V5-V7s tonight. Would love some strong climbers to project with and share beta. We can grab food nearby afterwards.",
+      "attendeesList": [
+        "Jake P.",
+        "Chris"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Photography Walk",
+      "location": "Brisbane City Botanic Gardens",
+      "time": "Tomorrow 9am",
+      "tier": "Hobbyist",
+      "vibes": [
+        "Creative",
+        "Outdoors"
+      ],
+      "attendees": 5,
+      "maxAttendees": 15,
+      "organizer": "Emma W.",
+      "description": "A casual morning walk through the botanic gardens focusing on macro and landscape photography. Any camera is welcome, including phones!",
+      "attendeesList": [
+        "Emma W.",
+        "Liam",
+        "Olivia",
+        "Noah",
+        "Ava"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Intro to Machine Learning",
+      "location": "Advanced Engineering Building",
+      "time": "Wednesday 2pm",
+      "tier": "Newbie",
+      "vibes": [
+        "Academic",
+        "Tech"
+      ],
+      "attendees": 12,
+      "maxAttendees": 20,
+      "organizer": "UQ Data Science Club",
+      "price": 15,
+      "description": "A beginner-friendly workshop on Machine Learning. We'll build our first linear regression model in Python. Ticket covers pizza!",
+      "attendeesList": [
+        "UQ Data Science",
+        "Student1",
+        "Student2",
+        "Student3"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Social Soccer Match",
+      "location": "UQ Synthetic Pitches",
+      "time": "Friday 5pm",
+      "tier": "Hobbyist",
+      "vibes": [
+        "Sports",
+        "Active"
+      ],
+      "attendees": 18,
+      "maxAttendees": 22,
+      "organizer": "Dan K.",
+      "price": 5,
+      "description": "Casual 11v11 full pitch game. All genders and skill levels welcome. We play for fun, no aggressive tackles please. Fee covers pitch hire.",
+      "attendeesList": [
+        "Dan K.",
+        "Player1",
+        "Player2",
+        "Player3"
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "id": "1",
+      "activityId": 1,
+      "sender": "Alex M.",
+      "text": "Hey everyone! Court 5 is booked.",
+      "time": "10:00 AM"
+    },
+    {
+      "id": "2",
+      "activityId": 1,
+      "sender": "Jordan",
+      "text": "Awesome, I'm bringing an extra racket if anyone needs.",
+      "time": "10:05 AM"
+    },
+    {
+      "id": "2.5",
+      "activityId": 1,
+      "sender": "Sam",
+      "text": "What time should we meet? I'll bring water!",
+      "time": "10:10 AM"
+    },
+    {
+      "id": "2.7",
+      "activityId": 1,
+      "sender": "Alex M.",
+      "text": "Let's aim for 11am at the courts entrance 👟",
+      "time": "10:15 AM"
+    },
+    {
+      "id": "3",
+      "activityId": 2,
+      "sender": "Sarah T.",
+      "text": "I managed to grab the large table at the back!",
+      "time": "9:00 AM"
+    },
+    {
+      "id": "4",
+      "activityId": 2,
+      "sender": "David",
+      "text": "Are we doing Blind 75 today?",
+      "time": "9:15 AM"
+    },
+    {
+      "id": "5",
+      "activityId": 2,
+      "sender": "Sarah T.",
+      "text": "Yes, starting with Arrays & Hashing.",
+      "time": "9:20 AM"
+    },
+    {
+      "id": "5.5",
+      "activityId": 2,
+      "sender": "Michael",
+      "text": "Great! Been struggling with those. Can't wait",
+      "time": "9:25 AM"
+    },
+    {
+      "id": "5.7",
+      "activityId": 2,
+      "sender": "Jessica",
+      "text": "See you all in 30 mins! Grabbing coffee first ☕",
+      "time": "9:30 AM"
+    },
+    {
+      "id": "6",
+      "activityId": 3,
+      "sender": "Jake P.",
+      "text": "I'll be wearing a red UQ climbing shirt.",
+      "time": "4:00 PM"
+    },
+    {
+      "id": "6.5",
+      "activityId": 3,
+      "sender": "Chris",
+      "text": "Sounds good! I'll bring my crash pad",
+      "time": "4:15 PM"
+    },
+    {
+      "id": "6.7",
+      "activityId": 3,
+      "sender": "Jake P.",
+      "text": "Nice! See you at 6pm sharp 🧗",
+      "time": "4:30 PM"
+    },
+    {
+      "id": "7",
+      "activityId": 4,
+      "sender": "Emma W.",
+      "text": "Fingers crossed for good weather tomorrow!",
+      "time": "7:00 PM"
+    },
+    {
+      "id": "7.5",
+      "activityId": 4,
+      "sender": "Liam",
+      "text": "The forecast looks pretty good actually! 📸",
+      "time": "7:15 PM"
+    },
+    {
+      "id": "7.7",
+      "activityId": 4,
+      "sender": "Olivia",
+      "text": "Count me in! Can't wait to explore the gardens",
+      "time": "7:30 PM"
+    },
+    {
+      "id": "8",
+      "activityId": 5,
+      "sender": "UQ Data Science",
+      "text": "Please make sure you have Jupyter Notebook installed prior to the workshop.",
+      "time": "Mon 10:00 AM"
+    },
+    {
+      "id": "8.5",
+      "activityId": 5,
+      "sender": "UQ Data Science",
+      "text": "Also bring your laptop! We'll be coding along.",
+      "time": "Mon 10:05 AM"
+    },
+    {
+      "id": "9",
+      "activityId": 6,
+      "sender": "Dan K.",
+      "text": "We need 4 more people to make it 11v11!",
+      "time": "Wed 2:00 PM"
+    },
+    {
+      "id": "9.5",
+      "activityId": 6,
+      "sender": "Dan K.",
+      "text": "Game starts at 5pm sharp, please arrive by 4:45pm for warm-up",
+      "time": "Wed 2:30 PM"
+    }
+  ],
+  "joinedActivities": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
