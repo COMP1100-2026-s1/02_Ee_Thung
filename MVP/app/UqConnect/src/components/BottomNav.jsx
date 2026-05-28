@@ -6,6 +6,9 @@ export default function BottomNav({ userName }) {
   const location = useLocation();
   const currentPath = location.pathname;
 
+  // Hide BottomNav entirely inside individual chat rooms to maximize typing space
+  if (currentPath.startsWith('/chat/')) return null;
+
   const tabs = [
     { path: '/feed', label: 'Live', icon: Home },
     { path: '/chats', label: 'Chats', icon: MessageCircle },
@@ -13,7 +16,6 @@ export default function BottomNav({ userName }) {
     { path: '/host', label: 'Host', icon: PlusCircle },
     { path: '/pathfinder', label: 'Guide', icon: Compass },
     { path: '/history', label: 'History', icon: History },
-    { path: '/account', label: userName || 'Account', icon: User, isAccount: true },
   ];
 
   const initial = userName ? userName.charAt(0).toUpperCase() : null;

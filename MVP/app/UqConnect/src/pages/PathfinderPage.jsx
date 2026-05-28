@@ -10,7 +10,7 @@ export default function PathfinderPage() {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 20 }}
-      className="pb-24 pt-14 md:pt-24 px-5 min-h-screen max-w-4xl mx-auto"
+      className="pb-24 pt-24 px-5 min-h-screen max-w-4xl mx-auto"
     >
       <header className="mb-6">
         <div className="w-12 h-12 bg-uqPurple/10 rounded-2xl flex items-center justify-center mb-4">

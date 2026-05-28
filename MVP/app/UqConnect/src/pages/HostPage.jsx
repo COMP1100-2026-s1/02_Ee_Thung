@@ -64,7 +64,7 @@ export default function HostPage() {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 20 }}
-      className="pb-24 pt-14 md:pt-24 px-5 max-w-2xl mx-auto min-h-screen"
+      className="pb-24 pt-24 px-5 max-w-2xl mx-auto min-h-screen"
     >
       {/* Success Toast */}
       {showSuccess && (

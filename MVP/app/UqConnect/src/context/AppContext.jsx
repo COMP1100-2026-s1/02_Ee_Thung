@@ -50,7 +50,7 @@ export function AppProvider({ children }) {
   }, [joinedClubs]);
 
   // Derived: joined activities are full activity objects matching joinedActivityIds
-  const joinedActivities = activities.filter(a => joinedActivityIds.includes(a.id));
+  const joinedActivities = activities.filter(a => joinedActivityIds.map(String).includes(String(a.id)));
 
   // Chats: group messages by activityId
   const chats = messages.reduce((acc, msg) => {

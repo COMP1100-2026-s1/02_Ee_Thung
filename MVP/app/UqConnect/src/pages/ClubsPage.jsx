@@ -23,7 +23,7 @@ export default function ClubsPage() {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 20 }}
-      className="pb-24 pt-14 md:pt-24 px-5 min-h-screen max-w-6xl mx-auto"
+      className="pb-24 pt-24 px-5 min-h-screen max-w-6xl mx-auto"
     >
       <header className="mb-6">
         <h1 className="text-2xl font-black text-gray-900 tracking-tight">Clubs & Societies</h1>
