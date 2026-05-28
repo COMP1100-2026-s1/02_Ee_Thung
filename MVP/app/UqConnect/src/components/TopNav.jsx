@@ -20,7 +20,7 @@ export default function TopNav({ userName }) {
   const displayName = userName || 'Account';
 
   return (
-    <nav className={`hidden md:flex fixed top-0 w-full px-8 h-16 z-50 items-center justify-between border-b transition-all duration-300 ${
+    <nav className={`flex fixed top-0 w-full px-4 md:px-8 h-16 z-50 items-center justify-between border-b transition-all duration-300 ${
       isWelcome
         ? 'bg-transparent border-white/10'
         : 'bg-white border-gray-100 shadow-sm'
@@ -33,9 +33,9 @@ export default function TopNav({ userName }) {
           UQ-Connect
         </Link>
 
-        {/* Tabs — hidden on welcome page */}
+        {/* Tabs — hidden on welcome page AND hidden on mobile */}
         {!isWelcome && (
-          <div className="flex items-center gap-1 h-full">
+          <div className="hidden md:flex items-center gap-1 h-full">
             {tabs.map((tab) => {
               const isActive = currentPath === tab.path;
               const Icon = tab.icon;

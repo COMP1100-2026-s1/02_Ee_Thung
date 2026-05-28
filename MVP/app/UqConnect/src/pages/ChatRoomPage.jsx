@@ -52,21 +52,19 @@ export default function ChatRoomPage() {
   const displayName = userName || localStorage.getItem('userName') || 'You';
 
   const [inputText, setInputText] = useState('');
-  const [localMessages, setLocalMessages] = useState([]);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
   const activityId = Number(id);
 
   // Look up from ALL activities, not just joined ones
-  const activity = activities.find(a => a.id === activityId);
+  const activity = activities.find(a => String(a.id) === String(activityId));
 
-  // Merge: context messages + local optimistic + mock fallback
+  // Merge: context messages + mock fallback
   const contextMessages = chats[activityId] || [];
-  const baseMessages = contextMessages.length > 0
+  const allMessages = contextMessages.length > 0
     ? contextMessages
     : (MOCK_MESSAGES[activityId] || []);
-  const allMessages = [...baseMessages, ...localMessages];
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -106,8 +104,6 @@ export default function ChatRoomPage() {
     e.preventDefault();
     if (!inputText.trim()) return;
     const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    const newMsg = { id: `local-${Date.now()}`, sender: displayName, text: inputText.trim(), time };
-    setLocalMessages(prev => [...prev, newMsg]);
     sendMessage(activityId, { sender: displayName, text: inputText.trim(), time });
     setInputText('');
     inputRef.current?.focus();
@@ -121,7 +117,7 @@ export default function ChatRoomPage() {
   }));
 
   return (
-    <div className="flex flex-col h-screen bg-[#F0F2F5]" style={{ paddingTop: '64px' }}>
+    <div className="flex flex-col h-[100dvh] bg-[#F0F2F5]" style={{ paddingTop: '64px' }}>
 
       {/* ── Header ── */}
       <header className="bg-white border-b border-gray-100 px-4 py-3 flex items-center gap-3 shrink-0 shadow-sm">

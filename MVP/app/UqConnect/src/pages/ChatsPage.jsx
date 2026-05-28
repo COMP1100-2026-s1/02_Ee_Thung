@@ -33,7 +33,7 @@ export default function ChatsPage() {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 20 }}
-      className="pb-24 pt-14 md:pt-24 px-5 max-w-3xl mx-auto min-h-screen"
+      className="pb-24 pt-24 px-5 max-w-3xl mx-auto min-h-screen"
     >
       <header className="mb-5">
         <h1 className="text-2xl font-black text-gray-900 tracking-tight">Chats</h1>

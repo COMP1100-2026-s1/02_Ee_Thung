@@ -62,7 +62,7 @@ export default function FeedPage() {
 
   const closeModal = () => setSelectedActivity(null);
 
-  const isJoined = (activity) => joinedActivityIds?.includes(activity.id);
+  const isJoined = (activity) => joinedActivityIds?.map(String).includes(String(activity.id));
 
   const handleBookingSubmit = async (e) => {
     e.preventDefault();
@@ -339,7 +339,7 @@ export default function FeedPage() {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 20 }}
-        className="pb-24 pt-14 md:pt-24 px-5 max-w-5xl mx-auto"
+        className="pb-24 pt-24 px-5 max-w-5xl mx-auto"
       >
         <header className="flex justify-between items-center mb-6">
           <div>
