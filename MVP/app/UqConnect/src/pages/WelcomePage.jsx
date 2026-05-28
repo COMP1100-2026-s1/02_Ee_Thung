@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { Sparkles, Compass, ShieldCheck, ArrowRight } from 'lucide-react';
-import bgImage from '../assets/background.jpg';
+import bgImage from '../assets/image.png';
 
 export default function WelcomePage() {
   const navigate = useNavigate();
@@ -50,7 +50,7 @@ export default function WelcomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
-          className="text-lg md:text-xl text-white/75 font-medium max-w-2xl mx-auto text-center mb-14 leading-relaxed"
+          className="text-lg md:text-xl text-white font-medium max-w-2xl mx-auto text-center mb-14 leading-relaxed"
         >
           Move from organisation-first to activity-first. Discover what's happening right now, find your skill level, and never attend a social alone again.
         </motion.p>
@@ -73,7 +73,7 @@ export default function WelcomePage() {
                 <Icon className="text-white" size={22} />
               </div>
               <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-              <p className="text-white/65 text-sm leading-relaxed">{desc}</p>
+              <p className="text-white/80 text-sm leading-relaxed">{desc}</p>
             </motion.div>
           ))}
         </div>
