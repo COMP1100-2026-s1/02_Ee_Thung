@@ -31,7 +31,7 @@
         "Academic",
         "Tech"
       ],
-      "attendees": 5,
+      "attendees": 6,
       "maxAttendees": 8,
       "organizer": "Sarah T.",
       "description": "Struggling with graphs and dynamic programming? Join us at Merlo where we will grind some Leetcode easy/mediums and help each other out. All skill levels welcome!",
@@ -39,7 +39,8 @@
         "Sarah T.",
         "Michael",
         "David",
-        "Jessica"
+        "Jessica",
+        "Reino Yuris"
       ]
     },
     {
@@ -144,6 +145,20 @@
       "time": "10:05 AM"
     },
     {
+      "id": "2.5",
+      "activityId": 1,
+      "sender": "Sam",
+      "text": "What time should we meet? I'll bring water!",
+      "time": "10:10 AM"
+    },
+    {
+      "id": "2.7",
+      "activityId": 1,
+      "sender": "Alex M.",
+      "text": "Let's aim for 11am at the courts entrance 👟",
+      "time": "10:15 AM"
+    },
+    {
       "id": "3",
       "activityId": 2,
       "sender": "Sarah T.",
@@ -165,11 +180,39 @@
       "time": "9:20 AM"
     },
     {
+      "id": "5.5",
+      "activityId": 2,
+      "sender": "Michael",
+      "text": "Great! Been struggling with those. Can't wait",
+      "time": "9:25 AM"
+    },
+    {
+      "id": "5.7",
+      "activityId": 2,
+      "sender": "Jessica",
+      "text": "See you all in 30 mins! Grabbing coffee first ☕",
+      "time": "9:30 AM"
+    },
+    {
       "id": "6",
       "activityId": 3,
       "sender": "Jake P.",
       "text": "I'll be wearing a red UQ climbing shirt.",
       "time": "4:00 PM"
+    },
+    {
+      "id": "6.5",
+      "activityId": 3,
+      "sender": "Chris",
+      "text": "Sounds good! I'll bring my crash pad",
+      "time": "4:15 PM"
+    },
+    {
+      "id": "6.7",
+      "activityId": 3,
+      "sender": "Jake P.",
+      "text": "Nice! See you at 6pm sharp 🧗",
+      "time": "4:30 PM"
     },
     {
       "id": "7",
@@ -179,6 +222,20 @@
       "time": "7:00 PM"
     },
     {
+      "id": "7.5",
+      "activityId": 4,
+      "sender": "Liam",
+      "text": "The forecast looks pretty good actually! 📸",
+      "time": "7:15 PM"
+    },
+    {
+      "id": "7.7",
+      "activityId": 4,
+      "sender": "Olivia",
+      "text": "Count me in! Can't wait to explore the gardens",
+      "time": "7:30 PM"
+    },
+    {
       "id": "8",
       "activityId": 5,
       "sender": "UQ Data Science",
@@ -186,11 +243,25 @@
       "time": "Mon 10:00 AM"
     },
     {
+      "id": "8.5",
+      "activityId": 5,
+      "sender": "UQ Data Science",
+      "text": "Also bring your laptop! We'll be coding along.",
+      "time": "Mon 10:05 AM"
+    },
+    {
       "id": "9",
       "activityId": 6,
       "sender": "Dan K.",
       "text": "We need 4 more people to make it 11v11!",
       "time": "Wed 2:00 PM"
+    },
+    {
+      "id": "9.5",
+      "activityId": 6,
+      "sender": "Dan K.",
+      "text": "Game starts at 5pm sharp, please arrive by 4:45pm for warm-up",
+      "time": "Wed 2:30 PM"
     }
   ],
   "joinedActivities": [],

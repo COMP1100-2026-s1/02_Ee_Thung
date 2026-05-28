@@ -32,6 +32,7 @@ function AnimatedRoutes({ isAuthenticated, handleLogin, handleLogout }) {
           </>
         ) : (
           <>
+            <Route path="/" element={<WelcomePage />} />
             <Route path="/feed" element={<FeedPage />} />
             <Route path="/clubs" element={<ClubsPage />} />
             <Route path="/host" element={<HostPage />} />
