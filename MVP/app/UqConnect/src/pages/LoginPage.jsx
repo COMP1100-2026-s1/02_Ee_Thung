@@ -5,13 +5,34 @@ import { Link, useNavigate } from 'react-router-dom';
 export default function LoginPage({ onLogin }) {
   const [studentId, setStudentId] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (studentId.length === 8 && password.length > 0) {
-      onLogin(`s${studentId}`);
-      navigate('/feed');
+    if (studentId.length !== 8) {
+      setError('Student Number must be exactly 8 digits.');
+      return;
+    }
+    if (password.length > 0) {
+      setLoading(true);
+      setError('');
+      try {
+        const res = await fetch(`http://localhost:3001/users?studentId=s${studentId}&password=${password}`);
+        const users = await res.json();
+        
+        if (users.length > 0) {
+          onLogin(users[0]);
+          navigate('/feed');
+        } else {
+          setError('Invalid Student Number or Password.');
+          setLoading(false);
+        }
+      } catch (err) {
+        setError('Failed to connect to the server. Is json-server running?');
+        setLoading(false);
+      }
     }
   };
 
@@ -28,6 +49,12 @@ export default function LoginPage({ onLogin }) {
       >
         <h1 className="text-3xl font-black text-gray-900 mb-2">Welcome back</h1>
         <p className="text-gray-500 text-sm font-medium mb-8">Sign in with your UQ credentials.</p>
+
+        {error && (
+          <div className="mb-6 p-3 bg-red-50 text-red-600 text-sm font-medium rounded-xl border border-red-100">
+            {error}
+          </div>
+        )}
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
@@ -56,9 +83,10 @@ export default function LoginPage({ onLogin }) {
           
           <button 
             type="submit" 
-            className="w-full bg-uqPurple text-white py-4 rounded-xl font-bold mt-4 shadow-lg shadow-uqPurple/20 hover:bg-uqPurple/90 transition active:scale-[0.98]"
+            disabled={loading}
+            className={`w-full bg-uqPurple text-white py-4 rounded-xl font-bold mt-4 shadow-lg shadow-uqPurple/20 transition ${loading ? 'opacity-70 cursor-wait' : 'hover:bg-uqPurple/90 active:scale-[0.98]'}`}
           >
-            Sign In
+            {loading ? 'Signing in...' : 'Sign In'}
           </button>
         </form>
 

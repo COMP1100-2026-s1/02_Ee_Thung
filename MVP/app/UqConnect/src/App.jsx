@@ -52,7 +52,7 @@ function AnimatedRoutes({ isAuthenticated, handleLogin, handleLogout }) {
 
 // Inner component so it can access AppContext
 function AppInner() {
-  const { setUserName } = useAppContext();
+  const { setUserName, setUser } = useAppContext();
   const [isAuthenticated, setIsAuthenticated] = useState(
     () => !!localStorage.getItem('isAuthenticated')
   );
@@ -60,21 +60,25 @@ function AppInner() {
     () => localStorage.getItem('userName') || ''
   );
 
-  const handleLogin = (name = 'Student') => {
+  const handleLogin = (userData) => {
     localStorage.setItem('isAuthenticated', '1');
-    localStorage.setItem('userName', name);
+    localStorage.setItem('userName', userData.name);
+    localStorage.setItem('user', JSON.stringify(userData));
     setIsAuthenticated(true);
-    setDisplayName(name);
-    setUserName(name);
+    setDisplayName(userData.name);
+    setUserName(userData.name);
+    setUser(userData);
   };
 
   const handleLogout = () => {
     localStorage.removeItem('isAuthenticated');
     localStorage.removeItem('userName');
+    localStorage.removeItem('user');
     localStorage.removeItem('joinedActivityIds');
     setIsAuthenticated(false);
     setDisplayName('');
     setUserName('');
+    setUser(null);
   };
 
   // Sync userName to context on mount

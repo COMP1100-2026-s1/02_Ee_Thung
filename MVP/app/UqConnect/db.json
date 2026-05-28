@@ -1,4 +1,40 @@
 {
+  "users": [
+    {
+      "id": "1",
+      "studentId": "s41234567",
+      "password": "password123",
+      "name": "Alex Student",
+      "major": "Bachelor of Computer Science",
+      "bio": "I love playing tennis and coding in my free time.",
+      "skillLevel": "Hobbyist"
+    },
+    {
+      "id": "2",
+      "studentId": "s47654321",
+      "password": "password123",
+      "name": "Sarah Designer",
+      "major": "Bachelor of Information Technology",
+      "bio": "UI/UX enthusiast always looking for new inspiration.",
+      "skillLevel": "Newbie"
+    },
+    {
+      "id": "3",
+      "studentId": "s48888888",
+      "password": "password123",
+      "name": "Jordan Data",
+      "major": "Master of Data Science",
+      "bio": "I basically live in Jupyter Notebooks.",
+      "skillLevel": "Competitive"
+    },
+    {
+      "studentId": "s45563218",
+      "password": "12345",
+      "name": "Bob Marley",
+      "major": "Bachelor of Law",
+      "id": "RKHrvF5OgHY"
+    }
+  ],
   "activities": [
     {
       "id": "1",
@@ -31,7 +67,7 @@
         "Academic",
         "Tech"
       ],
-      "attendees": 6,
+      "attendees": 7,
       "maxAttendees": 8,
       "organizer": "Sarah T.",
       "description": "Struggling with graphs and dynamic programming? Join us at Merlo where we will grind some Leetcode easy/mediums and help each other out. All skill levels welcome!",
@@ -40,7 +76,8 @@
         "Michael",
         "David",
         "Jessica",
-        "Reino Yuris"
+        "Reino Yuris",
+        "Alex Len"
       ]
     },
     {

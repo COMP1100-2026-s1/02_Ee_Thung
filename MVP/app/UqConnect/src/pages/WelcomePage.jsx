@@ -10,7 +10,7 @@ export default function WelcomePage() {
 
   return (
     <div
-      className="min-h-screen flex flex-col relative overflow-hidden"
+      className="min-h-screen flex flex-col relative overflow-y-auto"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover',
@@ -22,7 +22,7 @@ export default function WelcomePage() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/75" />
 
       {/* Content — sits above overlay */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center items-center max-w-5xl mx-auto px-6 w-full py-20">
+      <div className="relative z-10 flex-1 flex flex-col justify-center items-center max-w-5xl mx-auto px-6 w-full pt-10 pb-10 md:pb-40">
 
         {/* Badge */}
         <motion.div
@@ -55,28 +55,7 @@ export default function WelcomePage() {
           Move from organisation-first to activity-first. Discover what's happening right now, find your skill level, and never attend a social alone again.
         </motion.p>
 
-        {/* Feature cards — glassmorphism */}
-        <div className="grid md:grid-cols-3 gap-4 w-full max-w-4xl mb-14">
-          {[
-            { icon: Sparkles,    title: 'Live Feed',      desc: 'See exactly what\'s happening on campus right now and join instantly.', delay: 0.2 },
-            { icon: ShieldCheck, title: 'Skill Matching', desc: 'No social anxiety. Join events tagged by skill level — Newbie, Hobbyist, Competitive.', delay: 0.25 },
-            { icon: Compass,     title: 'Pathfinder',     desc: 'Book 1-on-1 chats with mentors to find clubs and societies that fit you.', delay: 0.3 },
-          ].map(({ icon: Icon, title, desc, delay }) => (
-            <motion.div
-              key={title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay }}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-7 hover:bg-white/15 transition-all"
-            >
-              <div className="w-11 h-11 bg-white/20 rounded-2xl flex items-center justify-center mb-4">
-                <Icon className="text-white" size={22} />
-              </div>
-              <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-              <p className="text-white/80 text-sm leading-relaxed">{desc}</p>
-            </motion.div>
-          ))}
-        </div>
+        {/* Features moved to bottom floating bar below */}
 
         {/* CTA buttons */}
         <motion.div
@@ -109,7 +88,33 @@ export default function WelcomePage() {
             </>
           )}
         </motion.div>
+      </div>
 
+      {/* Floating Bottom Bar Features */}
+      <div className="relative md:absolute bottom-0 left-0 w-full p-4 md:p-8 z-20 bg-gradient-to-t from-black/90 via-black/50 to-transparent pt-10 md:pt-20 mt-auto">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-4">
+          {[
+            { icon: Sparkles,    title: 'Live Feed',      desc: 'See exactly what\'s happening on campus right now and join instantly.', delay: 0.2 },
+            { icon: ShieldCheck, title: 'Skill Matching', desc: 'No social anxiety. Join events tagged by skill level.', delay: 0.25 },
+            { icon: Compass,     title: 'Pathfinder',     desc: 'Book 1-on-1 chats with mentors to find your perfect club.', delay: 0.3 },
+          ].map(({ icon: Icon, title, desc, delay }) => (
+            <motion.div
+              key={title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay }}
+              className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-5 hover:bg-white/15 hover:border-violet-400/50 hover:-translate-y-1 shadow-2xl transition-all duration-300 flex items-start gap-4 group"
+            >
+              <div className="w-12 h-12 shrink-0 bg-white/10 group-hover:bg-violet-500/20 rounded-xl flex items-center justify-center transition-colors">
+                <Icon className="text-white group-hover:text-violet-300 transition-colors" size={24} />
+              </div>
+              <div>
+                <h3 className="text-lg font-black text-white mb-1 tracking-wide">{title}</h3>
+                <p className="text-white/80 text-sm font-medium leading-relaxed">{desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
