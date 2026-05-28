@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, Send, Users, Hash, Smile } from 'lucide-react';
+import { ChevronLeft, Send, Users, Hash, Smile, PhoneOff } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
+import { mentors } from '../data/mockData';
 
-// Fallback mock messages per activity ID
 const MOCK_MESSAGES = {
   1: [
     { id: 'm1', sender: 'Alex M.', text: 'Hey everyone! Court 5 is booked.', time: '10:00 AM' },
@@ -39,7 +39,12 @@ const MOCK_MESSAGES = {
   ],
 };
 
-// Avatar colour based on name (deterministic)
+const MENTOR_MOCK_MESSAGES = {
+  1: [{ id: 'm1', sender: 'Dr. Emily Chen', text: "Hi! Ready for your 15-minute session. What would you like to talk about? 😊", time: 'Just now' }],
+  2: [{ id: 'm1', sender: 'Marcus Johnson', text: "Hey! Great to connect. What questions do you have about leadership or uni life?", time: 'Just now' }],
+  3: [{ id: 'm1', sender: 'Priya Sharma', text: "Hello! Happy to chat about UI/UX portfolios. What stage are you at?", time: 'Just now' }],
+};
+
 function avatarColor(name = '') {
   const hue = [...name].reduce((acc, c) => acc + c.charCodeAt(0), 0) % 360;
   return `hsl(${hue}, 60%, 52%)`;
@@ -48,34 +53,48 @@ function avatarColor(name = '') {
 export default function ChatRoomPage() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { activities, chats, sendMessage, userName } = useAppContext();
+  const { activities, chats, sendMessage, userName, endMentorSession } = useAppContext();
   const displayName = userName || localStorage.getItem('userName') || 'You';
 
   const [inputText, setInputText] = useState('');
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
-  const activityId = Number(id);
+  // Check if this is a mentor chat
+  const isMentorChat = id?.startsWith('mentor-');
+  const mentorId = isMentorChat ? Number(id.replace('mentor-', '')) : null;
+  const mentor = mentorId ? mentors.find(m => m.id === mentorId) : null;
 
-  // Look up from ALL activities, not just joined ones
-  const activity = activities.find(a => String(a.id) === String(activityId));
+  const activityId = isMentorChat ? null : Number(id);
+  const activity = activityId ? activities.find(a => String(a.id) === String(activityId)) : null;
 
-  // Merge: context messages + mock fallback
-  const contextMessages = chats[activityId] || [];
-  const allMessages = contextMessages.length > 0
-    ? contextMessages
-    : (MOCK_MESSAGES[activityId] || []);
+  const storageKey = isMentorChat ? `mentorChat_${mentorId}_${displayName}` : null;
+
+  const [localMessages, setLocalMessages] = useState(() => {
+    if (!isMentorChat) return [];
+    try { return JSON.parse(localStorage.getItem(`mentorChat_${mentorId}_${displayName}`) || '[]'); } catch { return []; }
+  });
+
+  useEffect(() => {
+    if (storageKey && localMessages.length > 0) {
+      localStorage.setItem(storageKey, JSON.stringify(localMessages));
+    }
+  }, [localMessages, storageKey]);
+
+  const contextMessages = isMentorChat ? [] : (chats[activityId] || []);
+  const baseMessages = isMentorChat
+    ? (MENTOR_MOCK_MESSAGES[mentorId] || [])
+    : (contextMessages.length > 0 ? contextMessages : (MOCK_MESSAGES[activityId] || []));
+  const allMessages = [...baseMessages, ...localMessages];
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  useEffect(() => {
-    scrollToBottom();
-  }, [allMessages.length]);
+  useEffect(() => { scrollToBottom(); }, [allMessages.length]);
 
-  // Loading state while activities fetch
-  if (activities.length === 0) {
+  // Loading state for activity chats only
+  if (!isMentorChat && activities.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen gap-3">
         <div className="w-8 h-8 rounded-full border-4 border-uqPurple/20 border-t-uqPurple animate-spin" />
@@ -84,18 +103,22 @@ export default function ChatRoomPage() {
     );
   }
 
-  // Activity not found at all
-  if (!activity) {
+  if (isMentorChat && !mentor) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen gap-3">
+        <div className="text-4xl">💬</div>
+        <p className="text-gray-600 font-semibold">Mentor not found.</p>
+        <button onClick={() => navigate('/chats')} className="text-uqPurple font-bold mt-2 hover:underline">← Go to Chats</button>
+      </div>
+    );
+  }
+
+  if (!isMentorChat && !activity) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen gap-3">
         <div className="text-4xl">💬</div>
         <p className="text-gray-600 font-semibold">Activity not found.</p>
-        <button
-          onClick={() => navigate('/chats')}
-          className="text-uqPurple font-bold mt-2 hover:underline"
-        >
-          ← Go to Chats
-        </button>
+        <button onClick={() => navigate('/chats')} className="text-uqPurple font-bold mt-2 hover:underline">← Go to Chats</button>
       </div>
     );
   }
@@ -104,12 +127,16 @@ export default function ChatRoomPage() {
     e.preventDefault();
     if (!inputText.trim()) return;
     const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    sendMessage(activityId, { sender: displayName, text: inputText.trim(), time });
+    const newMsg = { id: `local-${Date.now()}`, sender: displayName, text: inputText.trim(), time };
+    if (isMentorChat) {
+      setLocalMessages(prev => [...prev, newMsg]);
+    } else {
+      sendMessage(activityId, { sender: displayName, text: inputText.trim(), time });
+    }
     setInputText('');
     inputRef.current?.focus();
   };
 
-  // Group consecutive messages from same sender
   const grouped = allMessages.map((msg, i) => ({
     ...msg,
     isFirst: i === 0 || allMessages[i - 1].sender !== msg.sender,
@@ -119,7 +146,7 @@ export default function ChatRoomPage() {
   return (
     <div className="flex flex-col h-[100dvh] bg-[#F0F2F5]" style={{ paddingTop: '64px' }}>
 
-      {/* ── Header ── */}
+      {/* Header */}
       <header className="bg-white border-b border-gray-100 px-4 py-3 flex items-center gap-3 shrink-0 shadow-sm">
         <button
           onClick={() => navigate('/chats')}
@@ -128,24 +155,35 @@ export default function ChatRoomPage() {
           <ChevronLeft size={22} />
         </button>
 
-        {/* Avatar */}
         <div
-          className="w-10 h-10 rounded-2xl flex items-center justify-center text-white font-black text-lg shrink-0 shadow-sm"
-          style={{ background: avatarColor(activity.title) }}
+          className={`w-10 h-10 rounded-2xl flex items-center justify-center shrink-0 shadow-sm ${isMentorChat ? 'bg-uqPurple/10' : ''}`}
+          style={isMentorChat ? {} : { background: avatarColor(activity.title) }}
         >
-          {activity.title.charAt(0)}
+          {isMentorChat
+            ? <span className="text-2xl">{mentor.avatar}</span>
+            : <span className="text-white font-black text-lg">{activity.title.charAt(0)}</span>
+          }
         </div>
 
         <div className="flex-1 min-w-0">
-          <h1 className="font-bold text-gray-900 truncate leading-tight">{activity.title}</h1>
+          <h1 className="font-bold text-gray-900 truncate leading-tight">
+            {isMentorChat ? mentor.name : activity.title}
+          </h1>
           <div className="flex items-center gap-1 text-xs text-gray-400 font-medium">
             <Users size={11} />
-            <span>{activity.attendees || 0} members · {activity.location}</span>
+            <span>{isMentorChat ? mentor.specialty : `${activity.attendees || 0} members · ${activity.location}`}</span>
           </div>
         </div>
 
-        <div className="flex items-center gap-1">
-          <div className="flex -space-x-1.5 mr-1">
+        {isMentorChat ? (
+          <button
+            onClick={() => { endMentorSession(mentorId); navigate('/pathfinder'); }}
+            className="flex items-center gap-1.5 bg-red-50 hover:bg-red-100 text-red-500 text-xs font-bold px-3 py-2 rounded-xl transition-colors shrink-0"
+          >
+            <PhoneOff size={13} /> End Session
+          </button>
+        ) : (
+          <div className="flex -space-x-1.5">
             {(activity.attendeesList || []).slice(0, 3).map((name, i) => (
               <div
                 key={i}
@@ -157,28 +195,24 @@ export default function ChatRoomPage() {
               </div>
             ))}
           </div>
-        </div>
+        )}
       </header>
 
-      {/* ── Messages ── */}
+      {/* Messages */}
       <div className="flex-1 overflow-y-auto px-4 py-4 no-scrollbar flex flex-col">
-
-        {/* Date divider */}
         <div className="flex items-center gap-3 mb-5">
           <div className="flex-1 h-px bg-gray-200" />
           <span className="text-[11px] text-gray-400 font-semibold whitespace-nowrap">Today</span>
           <div className="flex-1 h-px bg-gray-200" />
         </div>
 
-        {/* Welcome pill */}
         <div className="flex justify-center mb-5">
           <div className="bg-white border border-gray-100 rounded-full px-4 py-1.5 text-xs text-gray-500 font-medium shadow-sm flex items-center gap-1.5">
             <Hash size={11} />
-            Welcome to <span className="font-bold text-gray-700">{activity.title}</span>
+            {isMentorChat ? `15m session with ${mentor.name}` : `Welcome to ${activity.title}`}
           </div>
         </div>
 
-        {/* Message list */}
         <div className="flex flex-col gap-0.5">
           {grouped.map((msg) => {
             const isMe = msg.sender === displayName;
@@ -192,7 +226,6 @@ export default function ChatRoomPage() {
                   transition={{ duration: 0.18 }}
                   className={`flex items-end gap-2 ${isMe ? 'flex-row-reverse' : 'flex-row'} ${msg.isFirst ? 'mt-3' : 'mt-0.5'}`}
                 >
-                  {/* Avatar — only shown for others on last message in group */}
                   <div className="w-8 shrink-0">
                     {!isMe && msg.isLast && (
                       <div
@@ -205,14 +238,11 @@ export default function ChatRoomPage() {
                   </div>
 
                   <div className={`flex flex-col max-w-[72%] ${isMe ? 'items-end' : 'items-start'}`}>
-                    {/* Sender name — only on first in group */}
                     {!isMe && msg.isFirst && (
                       <span className="text-[11px] font-semibold ml-3 mb-1" style={{ color }}>
                         {msg.sender}
                       </span>
                     )}
-
-                    {/* Bubble */}
                     <div
                       className={`px-4 py-2.5 text-[14.5px] leading-relaxed shadow-sm ${
                         isMe
@@ -222,8 +252,6 @@ export default function ChatRoomPage() {
                     >
                       {msg.text}
                     </div>
-
-                    {/* Timestamp — only on last in group */}
                     {msg.isLast && (
                       <span className={`text-[10px] text-gray-400 mt-1 ${isMe ? 'mr-1' : 'ml-1'}`}>
                         {msg.time}
@@ -239,7 +267,7 @@ export default function ChatRoomPage() {
         <div ref={messagesEndRef} className="h-2" />
       </div>
 
-      {/* ── Input Bar ── */}
+      {/* Input Bar */}
       <div className="bg-white border-t border-gray-100 px-4 py-3 shrink-0 shadow-[0_-4px_20px_-4px_rgba(0,0,0,0.06)]">
         <form onSubmit={handleSend} className="flex items-center gap-2 max-w-3xl mx-auto">
           <button type="button" className="p-2 text-gray-400 hover:text-gray-600 transition-colors shrink-0">
@@ -251,7 +279,7 @@ export default function ChatRoomPage() {
               type="text"
               value={inputText}
               onChange={e => setInputText(e.target.value)}
-              placeholder={`Message ${activity.title}...`}
+              placeholder={isMentorChat ? `Message ${mentor.name}...` : `Message ${activity.title}...`}
               className="w-full bg-gray-100 rounded-2xl px-4 py-2.5 pr-12 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-uqPurple/20 transition-all border border-transparent focus:border-uqPurple/20"
             />
           </div>

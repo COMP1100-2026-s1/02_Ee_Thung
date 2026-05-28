@@ -3,8 +3,11 @@ import { motion } from 'framer-motion';
 import { Compass, Sparkles } from 'lucide-react';
 import MentorCard from '../components/MentorCard';
 import { mentors } from '../data/mockData';
+import { useAppContext } from '../context/AppContext';
 
 export default function PathfinderPage() {
+  const { bookedMentorIds, bookMentor } = useAppContext();
+
   return (
     <motion.div 
       initial={{ opacity: 0, x: -20 }}
@@ -41,7 +44,11 @@ export default function PathfinderPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
           >
-            <MentorCard mentor={mentor} />
+            <MentorCard
+              mentor={mentor}
+              isBooked={bookedMentorIds.includes(mentor.id)}
+              onBook={bookMentor}
+            />
           </motion.div>
         ))}
       </div>

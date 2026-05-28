@@ -41,6 +41,7 @@ function AnimatedRoutes({ isAuthenticated, handleLogin, handleLogout }) {
             <Route path="/history" element={<HistoryPage />} />
             <Route path="/chats" element={<ChatsPage />} />
             <Route path="/chat/:id" element={<ChatRoomPage />} />
+            <Route path="/chat/mentor-:id" element={<ChatRoomPage />} />
             <Route path="*" element={<Navigate to="/feed" replace />} />
           </>
         )}

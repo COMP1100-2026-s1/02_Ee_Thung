@@ -13,6 +13,14 @@ export function AppProvider({ children }) {
   const [joinedClubs, setJoinedClubs] = useState(() => {
     try { return JSON.parse(localStorage.getItem('joinedClubs') || '[1,11]'); } catch { return [1, 11]; }
   });
+  const [bookedMentorIds, setBookedMentorIds] = useState(() => {
+    const user = localStorage.getItem('userName') || 'guest';
+    try { return JSON.parse(localStorage.getItem(`bookedMentorIds_${user}`) || '[]'); } catch { return []; }
+  });
+  const [endedMentorIds, setEndedMentorIds] = useState(() => {
+    const user = localStorage.getItem('userName') || 'guest';
+    try { return JSON.parse(localStorage.getItem(`endedMentorIds_${user}`) || '[]'); } catch { return []; }
+  });
   const [userName, setUserName] = useState(() => localStorage.getItem('userName') || '');
   const [loading, setLoading] = useState(true);
 
@@ -48,6 +56,16 @@ export function AppProvider({ children }) {
   useEffect(() => {
     localStorage.setItem('joinedClubs', JSON.stringify(joinedClubs));
   }, [joinedClubs]);
+
+  useEffect(() => {
+    const user = localStorage.getItem('userName') || 'guest';
+    localStorage.setItem(`bookedMentorIds_${user}`, JSON.stringify(bookedMentorIds));
+  }, [bookedMentorIds]);
+
+  useEffect(() => {
+    const user = localStorage.getItem('userName') || 'guest';
+    localStorage.setItem(`endedMentorIds_${user}`, JSON.stringify(endedMentorIds));
+  }, [endedMentorIds]);
 
   // Derived: joined activities are full activity objects matching joinedActivityIds
   const joinedActivities = activities.filter(a => joinedActivityIds.map(String).includes(String(a.id)));
@@ -110,6 +128,15 @@ export function AppProvider({ children }) {
     setJoinedClubs(prev => prev.includes(clubId) ? prev.filter(id => id !== clubId) : [...prev, clubId]);
   };
 
+  const bookMentor = (mentorId) => {
+    setBookedMentorIds(prev => [...new Set([...prev, mentorId])]);
+  };
+
+  const endMentorSession = (mentorId) => {
+    setBookedMentorIds(prev => prev.filter(id => id !== mentorId));
+    setEndedMentorIds(prev => [...new Set([...prev, mentorId])]);
+  };
+
   const sendMessage = async (activityId, message) => {
     const newMsg = { activityId, ...message };
     // Optimistically add to local state
@@ -135,6 +162,10 @@ export function AppProvider({ children }) {
       joinedActivities,
       joinedActivityIds,
       joinActivity,
+      bookedMentorIds,
+      bookMentor,
+      endMentorSession,
+      endedMentorIds,
       chats,
       sendMessage,
       userName,
