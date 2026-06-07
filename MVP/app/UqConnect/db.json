@@ -33,6 +33,13 @@
       "name": "Bob Marley",
       "major": "Bachelor of Law",
       "id": "RKHrvF5OgHY"
+    },
+    {
+      "studentId": "s50220317",
+      "password": "12345",
+      "name": "Ray Zhui",
+      "major": "Bachelor of Math",
+      "id": "IU-9H8CKGQI"
     }
   ],
   "activities": [
@@ -67,7 +74,7 @@
         "Academic",
         "Tech"
       ],
-      "attendees": 7,
+      "attendees": 8,
       "maxAttendees": 8,
       "organizer": "Sarah T.",
       "description": "Struggling with graphs and dynamic programming? Join us at Merlo where we will grind some Leetcode easy/mediums and help each other out. All skill levels welcome!",
@@ -77,7 +84,8 @@
         "David",
         "Jessica",
         "Reino Yuris",
-        "Alex Len"
+        "Alex Len",
+        "Ray Zhui"
       ]
     },
     {
@@ -90,13 +98,14 @@
         "Active",
         "Indoor"
       ],
-      "attendees": 2,
+      "attendees": 3,
       "maxAttendees": 4,
       "organizer": "Jake P.",
       "description": "Projecting some V5-V7s tonight. Would love some strong climbers to project with and share beta. We can grab food nearby afterwards.",
       "attendeesList": [
         "Jake P.",
-        "Chris"
+        "Chris",
+        "Ray Zhui"
       ]
     },
     {
@@ -109,7 +118,7 @@
         "Creative",
         "Outdoors"
       ],
-      "attendees": 5,
+      "attendees": 6,
       "maxAttendees": 15,
       "organizer": "Emma W.",
       "description": "A casual morning walk through the botanic gardens focusing on macro and landscape photography. Any camera is welcome, including phones!",
@@ -118,7 +127,8 @@
         "Liam",
         "Olivia",
         "Noah",
-        "Ava"
+        "Ava",
+        "Ray Zhui"
       ]
     },
     {
@@ -131,7 +141,7 @@
         "Academic",
         "Tech"
       ],
-      "attendees": 12,
+      "attendees": 13,
       "maxAttendees": 20,
       "organizer": "UQ Data Science Club",
       "price": 15,
@@ -140,7 +150,8 @@
         "UQ Data Science",
         "Student1",
         "Student2",
-        "Student3"
+        "Student3",
+        "Ray Zhui"
       ]
     },
     {
@@ -153,7 +164,7 @@
         "Sports",
         "Active"
       ],
-      "attendees": 18,
+      "attendees": 19,
       "maxAttendees": 22,
       "organizer": "Dan K.",
       "price": 5,
@@ -162,8 +173,26 @@
         "Dan K.",
         "Player1",
         "Player2",
-        "Player3"
+        "Player3",
+        "Ray Zhui"
       ]
+    },
+    {
+      "title": "t",
+      "location": "g",
+      "time": "Sat, 30 May at 10:33 am – 12:34 pm",
+      "tier": "Hobbyist",
+      "vibes": [
+        "Social",
+        "Fun"
+      ],
+      "maxAttendees": 5,
+      "attendees": 1,
+      "organizer": "Ray Zhui",
+      "attendeesList": [
+        "Ray Zhui"
+      ],
+      "id": "sPNSpYBY3Fg"
     }
   ],
   "messages": [
@@ -313,6 +342,48 @@
       "text": "see you all",
       "time": "21.18",
       "id": "aG7ty7Y7Aio"
+    },
+    {
+      "activityId": 2,
+      "sender": "Ray Zhui",
+      "text": "yo'",
+      "time": "09.39",
+      "id": "Zo0JMmyBilA"
+    },
+    {
+      "activityId": 2,
+      "sender": "Ray Zhui",
+      "text": "hi",
+      "time": "09.43",
+      "id": "bUg5TR5FwV8"
+    },
+    {
+      "activityId": 3,
+      "sender": "Ray Zhui",
+      "text": "do u know janja garnbret",
+      "time": "10.06",
+      "id": "vebPT6XrqEA"
+    },
+    {
+      "activityId": 4,
+      "sender": "Ray Zhui",
+      "text": "hello",
+      "time": "10.21",
+      "id": "E046nGTYKtY"
+    },
+    {
+      "activityId": 6,
+      "sender": "Ray Zhui",
+      "text": "no",
+      "time": "10.24",
+      "id": "ol3e7pBCDd0"
+    },
+    {
+      "activityId": 2,
+      "sender": "Ray Zhui",
+      "text": "hi",
+      "time": "10.59",
+      "id": "Mcd_5yO4Sbw"
     }
   ],
   "joinedActivities": [],
