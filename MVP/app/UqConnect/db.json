@@ -31,7 +31,7 @@
         "Academic",
         "Tech"
       ],
-      "attendees": 6,
+      "attendees": 7,
       "maxAttendees": 8,
       "organizer": "Sarah T.",
       "description": "Struggling with graphs and dynamic programming? Join us at Merlo where we will grind some Leetcode easy/mediums and help each other out. All skill levels welcome!",
@@ -40,7 +40,8 @@
         "Michael",
         "David",
         "Jessica",
-        "Reino Yuris"
+        "Reino Yuris",
+        "Muhammad Thariq"
       ]
     },
     {
@@ -94,7 +95,7 @@
         "Academic",
         "Tech"
       ],
-      "attendees": 12,
+      "attendees": 13,
       "maxAttendees": 20,
       "organizer": "UQ Data Science Club",
       "price": 15,
@@ -103,7 +104,8 @@
         "UQ Data Science",
         "Student1",
         "Student2",
-        "Student3"
+        "Student3",
+        "Fuad AntiSuki"
       ]
     },
     {
@@ -127,6 +129,40 @@
         "Player2",
         "Player3"
       ]
+    },
+    {
+      "title": "policty debate",
+      "location": "Fafakost 13",
+      "time": "Mon, 8 June at 8:37 pm – 10:37 pm",
+      "tier": "Hobbyist",
+      "vibes": [
+        "Academic",
+        "Law"
+      ],
+      "maxAttendees": 10,
+      "attendees": 1,
+      "organizer": "Fuad AntiSuki",
+      "attendeesList": [
+        "Fuad AntiSuki"
+      ],
+      "id": "7oIRJD7wHLk"
+    },
+    {
+      "title": "faiz birthday",
+      "location": "rungkut",
+      "time": "Tue, 9 June at 3:37 pm – 8:37 pm",
+      "tier": "Newbie",
+      "vibes": [
+        "Social",
+        "Fun"
+      ],
+      "maxAttendees": 6,
+      "attendees": 1,
+      "organizer": "Muhammad Thariq",
+      "attendeesList": [
+        "Muhammad Thariq"
+      ],
+      "id": "7h8cRWD4CcQ"
     }
   ],
   "messages": [
@@ -276,6 +312,13 @@
       "text": "see you all",
       "time": "21.18",
       "id": "aG7ty7Y7Aio"
+    },
+    {
+      "activityId": 5,
+      "sender": "Fuad AntiSuki",
+      "text": "hi bestie",
+      "time": "04:32 PM",
+      "id": "94hsJR-T-7U"
     }
   ],
   "joinedActivities": [],
