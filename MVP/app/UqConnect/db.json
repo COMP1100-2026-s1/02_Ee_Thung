@@ -1,4 +1,47 @@
 {
+  "users": [
+    {
+      "id": "1",
+      "studentId": "s41234567",
+      "password": "password123",
+      "name": "Alex Student",
+      "major": "Bachelor of Computer Science",
+      "bio": "I love playing tennis and coding in my free time.",
+      "skillLevel": "Hobbyist"
+    },
+    {
+      "id": "2",
+      "studentId": "s47654321",
+      "password": "password123",
+      "name": "Sarah Designer",
+      "major": "Bachelor of Information Technology",
+      "bio": "UI/UX enthusiast always looking for new inspiration.",
+      "skillLevel": "Newbie"
+    },
+    {
+      "id": "3",
+      "studentId": "s48888888",
+      "password": "password123",
+      "name": "Jordan Data",
+      "major": "Master of Data Science",
+      "bio": "I basically live in Jupyter Notebooks.",
+      "skillLevel": "Competitive"
+    },
+    {
+      "studentId": "s45563218",
+      "password": "12345",
+      "name": "Bob Marley",
+      "major": "Bachelor of Law",
+      "id": "RKHrvF5OgHY"
+    },
+    {
+      "studentId": "s50220317",
+      "password": "12345",
+      "name": "Ray Zhui",
+      "major": "Bachelor of Math",
+      "id": "IU-9H8CKGQI"
+    }
+  ],
   "activities": [
     {
       "id": "1",
@@ -31,7 +74,7 @@
         "Academic",
         "Tech"
       ],
-      "attendees": 7,
+      "attendees": 6,
       "maxAttendees": 8,
       "organizer": "Sarah T.",
       "description": "Struggling with graphs and dynamic programming? Join us at Merlo where we will grind some Leetcode easy/mediums and help each other out. All skill levels welcome!",
@@ -40,8 +83,7 @@
         "Michael",
         "David",
         "Jessica",
-        "Reino Yuris",
-        "Muhammad Thariq"
+        "Reino Yuris"
       ]
     },
     {
@@ -54,13 +96,14 @@
         "Active",
         "Indoor"
       ],
-      "attendees": 2,
+      "attendees": 3,
       "maxAttendees": 4,
       "organizer": "Jake P.",
       "description": "Projecting some V5-V7s tonight. Would love some strong climbers to project with and share beta. We can grab food nearby afterwards.",
       "attendeesList": [
         "Jake P.",
-        "Chris"
+        "Chris",
+        "Ray Zhui"
       ]
     },
     {
@@ -73,7 +116,7 @@
         "Creative",
         "Outdoors"
       ],
-      "attendees": 5,
+      "attendees": 6,
       "maxAttendees": 15,
       "organizer": "Emma W.",
       "description": "A casual morning walk through the botanic gardens focusing on macro and landscape photography. Any camera is welcome, including phones!",
@@ -82,7 +125,8 @@
         "Liam",
         "Olivia",
         "Noah",
-        "Ava"
+        "Ava",
+        "Ray Zhui"
       ]
     },
     {
@@ -104,8 +148,7 @@
         "UQ Data Science",
         "Student1",
         "Student2",
-        "Student3",
-        "Fuad AntiSuki"
+        "Student3"
       ]
     },
     {
@@ -118,7 +161,7 @@
         "Sports",
         "Active"
       ],
-      "attendees": 18,
+      "attendees": 19,
       "maxAttendees": 22,
       "organizer": "Dan K.",
       "price": 5,
@@ -127,42 +170,9 @@
         "Dan K.",
         "Player1",
         "Player2",
-        "Player3"
+        "Player3",
+        "Ray Zhui"
       ]
-    },
-    {
-      "title": "policty debate",
-      "location": "Fafakost 13",
-      "time": "Mon, 8 June at 8:37 pm – 10:37 pm",
-      "tier": "Hobbyist",
-      "vibes": [
-        "Academic",
-        "Law"
-      ],
-      "maxAttendees": 10,
-      "attendees": 1,
-      "organizer": "Fuad AntiSuki",
-      "attendeesList": [
-        "Fuad AntiSuki"
-      ],
-      "id": "7oIRJD7wHLk"
-    },
-    {
-      "title": "faiz birthday",
-      "location": "rungkut",
-      "time": "Tue, 9 June at 3:37 pm – 8:37 pm",
-      "tier": "Newbie",
-      "vibes": [
-        "Social",
-        "Fun"
-      ],
-      "maxAttendees": 6,
-      "attendees": 1,
-      "organizer": "Muhammad Thariq",
-      "attendeesList": [
-        "Muhammad Thariq"
-      ],
-      "id": "7h8cRWD4CcQ"
     }
   ],
   "messages": [
@@ -312,13 +322,6 @@
       "text": "see you all",
       "time": "21.18",
       "id": "aG7ty7Y7Aio"
-    },
-    {
-      "activityId": 5,
-      "sender": "Fuad AntiSuki",
-      "text": "hi bestie",
-      "time": "04:32 PM",
-      "id": "94hsJR-T-7U"
     }
   ],
   "joinedActivities": [],

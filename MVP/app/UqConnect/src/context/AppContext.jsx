@@ -21,6 +21,9 @@ export function AppProvider({ children }) {
     const user = localStorage.getItem('userName') || 'guest';
     try { return JSON.parse(localStorage.getItem(`endedMentorIds_${user}`) || '[]'); } catch { return []; }
   });
+  const [user, setUser] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('user')); } catch { return null; }
+  });
   const [userName, setUserName] = useState(() => localStorage.getItem('userName') || '');
   const [loading, setLoading] = useState(true);
 
@@ -137,6 +140,30 @@ export function AppProvider({ children }) {
     setEndedMentorIds(prev => [...new Set([...prev, mentorId])]);
   };
 
+  const updateUser = async (updates) => {
+    if (!user || !user.id) return;
+    try {
+      const res = await fetch(`${API}/users/${user.id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updates)
+      });
+      const updatedUser = await res.json();
+      setUser(updatedUser);
+      localStorage.setItem('user', JSON.stringify(updatedUser));
+      
+      // Keep legacy userName synced
+      if (updates.name) {
+        setUserName(updates.name);
+        localStorage.setItem('userName', updates.name);
+      }
+      return true;
+    } catch (err) {
+      console.warn('Failed to update user', err);
+      return false;
+    }
+  };
+
   const sendMessage = async (activityId, message) => {
     const newMsg = { activityId, ...message };
     // Optimistically add to local state
@@ -170,6 +197,9 @@ export function AppProvider({ children }) {
       sendMessage,
       userName,
       setUserName,
+      user,
+      setUser,
+      updateUser
     }}>
       {children}
     </AppContext.Provider>
