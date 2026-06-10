@@ -173,6 +173,23 @@
         "Player3",
         "Ray Zhui"
       ]
+    },
+    {
+      "title": "Esport fun match - valorant",
+      "location": "Discord",
+      "time": "Tue, 9 June at 4:30 am – 8:35 am",
+      "tier": "Competitive",
+      "vibes": [
+        "Social",
+        "Fun"
+      ],
+      "maxAttendees": 10,
+      "attendees": 1,
+      "organizer": "Ray Zhui",
+      "attendeesList": [
+        "Ray Zhui"
+      ],
+      "id": "GWpjCfpLN4k"
     }
   ],
   "messages": [
