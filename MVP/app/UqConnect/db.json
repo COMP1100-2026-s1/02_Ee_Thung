@@ -74,7 +74,7 @@
         "Academic",
         "Tech"
       ],
-      "attendees": 8,
+      "attendees": 6,
       "maxAttendees": 8,
       "organizer": "Sarah T.",
       "description": "Struggling with graphs and dynamic programming? Join us at Merlo where we will grind some Leetcode easy/mediums and help each other out. All skill levels welcome!",
@@ -83,9 +83,7 @@
         "Michael",
         "David",
         "Jessica",
-        "Reino Yuris",
-        "Alex Len",
-        "Ray Zhui"
+        "Reino Yuris"
       ]
     },
     {
@@ -150,8 +148,7 @@
         "UQ Data Science",
         "Student1",
         "Student2",
-        "Student3",
-        "Ray Zhui"
+        "Student3"
       ]
     },
     {
@@ -176,23 +173,6 @@
         "Player3",
         "Ray Zhui"
       ]
-    },
-    {
-      "title": "t",
-      "location": "g",
-      "time": "Sat, 30 May at 10:33 am – 12:34 pm",
-      "tier": "Hobbyist",
-      "vibes": [
-        "Social",
-        "Fun"
-      ],
-      "maxAttendees": 5,
-      "attendees": 1,
-      "organizer": "Ray Zhui",
-      "attendeesList": [
-        "Ray Zhui"
-      ],
-      "id": "sPNSpYBY3Fg"
     }
   ],
   "messages": [
@@ -342,48 +322,6 @@
       "text": "see you all",
       "time": "21.18",
       "id": "aG7ty7Y7Aio"
-    },
-    {
-      "activityId": 2,
-      "sender": "Ray Zhui",
-      "text": "yo'",
-      "time": "09.39",
-      "id": "Zo0JMmyBilA"
-    },
-    {
-      "activityId": 2,
-      "sender": "Ray Zhui",
-      "text": "hi",
-      "time": "09.43",
-      "id": "bUg5TR5FwV8"
-    },
-    {
-      "activityId": 3,
-      "sender": "Ray Zhui",
-      "text": "do u know janja garnbret",
-      "time": "10.06",
-      "id": "vebPT6XrqEA"
-    },
-    {
-      "activityId": 4,
-      "sender": "Ray Zhui",
-      "text": "hello",
-      "time": "10.21",
-      "id": "E046nGTYKtY"
-    },
-    {
-      "activityId": 6,
-      "sender": "Ray Zhui",
-      "text": "no",
-      "time": "10.24",
-      "id": "ol3e7pBCDd0"
-    },
-    {
-      "activityId": 2,
-      "sender": "Ray Zhui",
-      "text": "hi",
-      "time": "10.59",
-      "id": "Mcd_5yO4Sbw"
     }
   ],
   "joinedActivities": [],
